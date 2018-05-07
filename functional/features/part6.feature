@@ -17,19 +17,3 @@ Feature: Tutorial part 6
     When updates hero name (MagnetaX) in details view
     When saves and shows MagnetaX in Dashboard
 
-  Scenario: Heroes tests
-    Given I am on toh
-✓ can switch to Heroes view
-✓ can route to hero details
-✓ updates hero name (MagnetaX) in details view
-✓ shows MagnetaX in Heroes list
-✓ deletes MagnetaX from Heroes list
-✓ adds back Magneta
-✓ displays correctly styled buttons
-
-  Scenario: Progressive hero search
-    Given I am on toh
-✓ searches for 'Ma'
-✓ continues search with 'g'
-✓ continues search with 'e' and gets Magneta
-✓ navigates to Magneta details view
