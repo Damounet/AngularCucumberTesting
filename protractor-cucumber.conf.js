@@ -1,20 +1,32 @@
+// Protractor configuration file, see link for more information
+// https://github.com/angular/protractor/blob/master/lib/config.ts
+
+const { SpecReporter } = require('jasmine-spec-reporter');
+
 exports.config = {
-    seleniumAddress: 'http://127.0.0.1:4444/wd/hub', // This is targetting your local running instance of the selenium webdriver
-    specs: [
-        'functional/features/**/*.feature'
-    ],
-    capabilities: {
-        browserName: 'chrome' // You can use any browser you want. On a CI environment you're going to want to use PhantomJS
-    },
-    framework: 'custom', //We need this line to use the cucumber framework
-    frameworkPath: require.resolve('protractor-cucumber-framework'), // Here it is
-    cucumberOpts: {
-  //      format:  'pretty',
-        require: 'functional/step_definitions/**/*.js', // This is where we'll be writing our actual tests
-    },
-    params: {
-        env: {
-            hostname: 'http://localhost:4200' // Whatever the address of your app is
-        }
-    }
+  allScriptsTimeout: 11000,
+  specs: ['./e2e/**/*.e2e-spec.ts'],
+  capabilities: {
+    browserName: 'chrome'
+  },
+  seleniumAddress: 'http://localhost:4444/wd/hub',
+  directConnect: true,
+  baseUrl: 'http://localhost:4200/',
+  framework: 'custom',
+  frameworkPath: require.resolve('protractor-cucumber-framework'),
+  specs: ['cucumber/features/*.feature'],
+  cucumberOpts: {
+    compiler: 'ts:ts-node/register',
+    format: ['json:cucumber/reports/json/result.json'],
+    require: ['cucumber/stepdefinitions/*.ts']
+    //tags help us execute specific scenarios of feature files
+  },
+  onPrepare() {
+    require('ts-node').register({
+      project: 'e2e/tsconfig.e2e.json'
+    });
+    /*jasmine
+      .getEnv()
+      .addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));*/
+  }
 };
