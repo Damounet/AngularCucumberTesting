@@ -20,44 +20,88 @@
             "keyword": "Given ",
             "line": 4,
             "name": "I am on toh",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:15"
+            },
             "result": {
-              "status": "undefined"
+              "status": "passed",
+              "duration": 1502000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 5,
-            "name": "has title 'Tour of Heroes'",
+            "name": "has page title 'Tour of Heroes'",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:22"
+            },
             "result": {
-              "status": "undefined"
+              "status": "passed",
+              "duration": 13000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 6,
-            "name": "has h1 'Tour of Heroes'",
+            "name": "on the initial page has h1 'Tour of Heroes'",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:26"
+            },
             "result": {
-              "status": "undefined"
+              "status": "passed",
+              "duration": 34000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 7,
-            "name": "has views Dashboard,Heroes",
+            "name": "has view Dashboard",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:41"
+            },
             "result": {
-              "status": "undefined"
+              "status": "passed",
+              "duration": 30000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 8,
-            "name": "has dashboard as the active view",
+            "name": "has view Heroes",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:50"
+            },
             "result": {
-              "status": "undefined"
+              "status": "passed",
+              "duration": 30000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "has dashboard as the active view",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:70"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 776000000
             }
           },
           {
@@ -68,89 +112,81 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3000000
+              "duration": 1000000
             }
           }
         ]
       },
       {
-        "id": "tutorial-part-6;dashboard-tests",
+        "id": "tutorial-part-6;go-on-an-hero-details-page",
         "keyword": "Scenario",
-        "line": 10,
-        "name": "Dashboard tests",
+        "line": 11,
+        "name": "Go on an hero details page",
         "tags": [],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 11,
+            "line": 12,
             "name": "I am on toh",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:15"
+            },
             "result": {
-              "status": "undefined"
+              "status": "passed",
+              "duration": 1567000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 12,
-            "name": "has top heroes",
-            "result": {
-              "status": "undefined"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
             "line": 13,
-            "name": "selects and routes to \"Magneta\" details",
+            "name": "top heroes grid is visible",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:74"
+            },
             "result": {
-              "status": "undefined"
+              "status": "passed",
+              "duration": 31000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 14,
-            "name": "updates hero name (MagnetaX) in details view",
+            "name": "I click on the first hero in the heroes grid",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:80"
+            },
             "result": {
-              "status": "undefined"
+              "status": "passed",
+              "duration": 619000000
             }
           },
           {
             "arguments": [],
-            "keyword": "When ",
+            "keyword": "Then ",
             "line": 15,
-            "name": "cancels and shows Magneta in Dashboard",
+            "name": "I am on the hero page details",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:87"
+            },
             "result": {
-              "status": "undefined"
+              "status": "failed",
+              "duration": 15000000,
+              "error_message": "AssertionError: expected 'http://localhost:4200/detail/12' to not include 'http://localhost:4200/detail'"
             }
           },
           {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 16,
-            "name": "selects and routes to Magneta details",
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:70"
+            },
             "result": {
-              "status": "undefined"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 17,
-            "name": "updates hero name (MagnetaX) in details view",
-            "result": {
-              "status": "undefined"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 18,
-            "name": "saves and shows MagnetaX in Dashboard",
-            "result": {
-              "status": "undefined"
+              "status": "passed",
+              "duration": 784000000
             }
           },
           {

@@ -18,7 +18,7 @@ exports.config = {
   cucumberOpts: {
     compiler: 'ts:ts-node/register',
     format: ['json:cucumber/reports/json/result.json'],
-    require: ['cucumber/stepdefinitions/*.ts']
+    require: ['cucumber/step_definitions/*.ts']
     //tags help us execute specific scenarios of feature files
   },
   onPrepare() {
