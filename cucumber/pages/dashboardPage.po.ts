@@ -15,8 +15,8 @@ export class DashboardPage {
     return element(by.id('topHeroesGrid'));
   }
 
-  public static getHeroButtons() {
-    return element(by.id('heroButton'));
+  public static getHeroButtonById(heroId: number) {
+    return element(by.id('heroButton' + heroId));
   }
 
   /*public static getApplicationName() {

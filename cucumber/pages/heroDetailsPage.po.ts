@@ -7,7 +7,15 @@ export class HeroDetailsPage {
     return this.url;
   }
 
-  /* public static getRootElement() {
-    return element(by.id('dashboardPage'));
-  } */
+  public static getRootElement() {
+    return element(by.id('heroDetailsPage'));
+  }
+
+  public static getHeroNameInput() {
+    return element(by.id('heroNameInput'));
+  }
+
+  public static getSaveButton() {
+    return element(by.id('heroSaveButton'));
+  }
 }
