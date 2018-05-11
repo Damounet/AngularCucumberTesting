@@ -18,4 +18,8 @@ export class HeroDetailsPage {
   public static getSaveButton() {
     return element(by.id('heroSaveButton'));
   }
+
+  public static getBackButton() {
+    return element(by.id('heroBackButton'));
+  }
 }

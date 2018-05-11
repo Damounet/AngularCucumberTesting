@@ -1,17 +1,17 @@
 [
   {
     "keyword": "Feature",
-    "name": "Tutorial part 6",
+    "name": "Dashboard",
     "line": 1,
-    "id": "tutorial-part-6",
+    "id": "dashboard",
     "tags": [],
-    "uri": "cucumber/features/part6.feature",
+    "uri": "cucumber/features/dashboard.feature",
     "elements": [
       {
-        "id": "tutorial-part-6;initial-page",
+        "id": "dashboard;go-on-an-hero-details-page-from-top-heroes-grid",
         "keyword": "Scenario",
         "line": 3,
-        "name": "Initial page",
+        "name": "Go on an hero details page from top heroes grid",
         "tags": [],
         "type": "scenario",
         "steps": [
@@ -21,130 +21,20 @@
             "line": 4,
             "name": "I am on toh",
             "match": {
-              "location": "cucumber/step_definitions/part6.step.ts:15"
+              "location": "cucumber/step_definitions/part6.step.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 1469000000
+              "duration": 1479000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 5,
-            "name": "has page title 'Tour of Heroes'",
-            "match": {
-              "location": "cucumber/step_definitions/part6.step.ts:20"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 12000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 6,
-            "name": "on the initial page has h1 'Tour of Heroes'",
-            "match": {
-              "location": "cucumber/step_definitions/part6.step.ts:24"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 32000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 7,
-            "name": "has view Dashboard",
-            "match": {
-              "location": "cucumber/step_definitions/part6.step.ts:28"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 29000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 8,
-            "name": "has view Heroes",
-            "match": {
-              "location": "cucumber/step_definitions/part6.step.ts:34"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 30000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 9,
-            "name": "has dashboard as the active view",
-            "match": {
-              "location": "cucumber/step_definitions/part6.step.ts:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 28000000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "match": {
-              "location": "cucumber/step_definitions/part6.step.ts:44"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 777000000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "match": {
-              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2000000
-            }
-          }
-        ]
-      },
-      {
-        "id": "tutorial-part-6;go-on-an-hero-details-page-via-top-heroes-grid",
-        "keyword": "Scenario",
-        "line": 11,
-        "name": "Go on an hero details page via top heroes grid",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 12,
-            "name": "I am on toh",
-            "match": {
-              "location": "cucumber/step_definitions/part6.step.ts:15"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1551000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 13,
             "name": "top heroes grid is visible",
             "match": {
-              "location": "cucumber/step_definitions/part6.step.ts:48"
+              "location": "cucumber/step_definitions/part6.step.ts:49"
             },
             "result": {
               "status": "passed",
@@ -154,38 +44,64 @@
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 14,
-            "name": "I click on the hero which id is 12 in the heroes grid",
+            "line": 6,
+            "name": "I click on 'Narco' link button from top heroes grid",
             "match": {
-              "location": "cucumber/step_definitions/part6.step.ts:52"
+              "location": "cucumber/step_definitions/part6.step.ts:53"
             },
             "result": {
               "status": "passed",
-              "duration": 599000000
+              "duration": 603000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 15,
+            "line": 7,
             "name": "I am on the hero page details",
             "match": {
-              "location": "cucumber/step_definitions/part6.step.ts:61"
+              "location": "cucumber/step_definitions/part6.step.ts:62"
             },
             "result": {
               "status": "passed",
-              "duration": 13000000
+              "duration": 12000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I click on the back button from the hero details page",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 597000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I am on the previous page",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11000000
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "match": {
-              "location": "cucumber/step_definitions/part6.step.ts:44"
+              "location": "cucumber/step_definitions/part6.step.ts:45"
             },
             "result": {
               "status": "passed",
-              "duration": 710000000
+              "duration": 798000000
             }
           },
           {
@@ -202,9 +118,155 @@
         ]
       },
       {
-        "id": "tutorial-part-6;modify-an-hero-name",
+        "id": "dashboard;go-on-an-hero-details-page-from-search",
         "keyword": "Scenario",
-        "line": 17,
+        "line": 11,
+        "name": "Go on an hero details page from search",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I am on toh",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1607000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "search input is visible",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:81"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I write 'Na' in the search input",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 931000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "'Narco' link button to his details page is visible",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:94"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I click on 'Narco' link button from dashboard search page",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:100"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 606000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I am on 'Narco' hero page details",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:109"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I click on the back button from the hero details page",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 598000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I am on the previous page",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 766000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Herodetails page",
+    "line": 1,
+    "id": "herodetails-page",
+    "tags": [],
+    "uri": "cucumber/features/heroDetails.feature",
+    "elements": [
+      {
+        "id": "herodetails-page;modify-an-hero-name",
+        "keyword": "Scenario",
+        "line": 3,
         "name": "Modify an hero name",
         "tags": [],
         "type": "scenario",
@@ -212,36 +274,36 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 18,
-            "name": "I am on hero details page which id is 12",
+            "line": 4,
+            "name": "I am on hero details page which its name is 'Narco'",
             "match": {
-              "location": "cucumber/step_definitions/part6.step.ts:67"
+              "location": "cucumber/step_definitions/part6.step.ts:133"
             },
             "result": {
               "status": "passed",
-              "duration": 2200000000
+              "duration": 2159000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 19,
+            "line": 5,
             "name": "I am modifying the name by 'Varian Wrynn'",
             "match": {
-              "location": "cucumber/step_definitions/part6.step.ts:75"
+              "location": "cucumber/step_definitions/part6.step.ts:143"
             },
             "result": {
               "status": "passed",
-              "duration": 188000000
+              "duration": 181000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 20,
+            "line": 6,
             "name": "I click on the save button",
             "match": {
-              "location": "cucumber/step_definitions/part6.step.ts:83"
+              "location": "cucumber/step_definitions/part6.step.ts:151"
             },
             "result": {
               "status": "passed",
@@ -251,10 +313,10 @@
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 21,
+            "line": 7,
             "name": "I am on the Dashboard page",
             "match": {
-              "location": "cucumber/step_definitions/part6.step.ts:90"
+              "location": "cucumber/step_definitions/part6.step.ts:158"
             },
             "result": {
               "status": "passed",
@@ -264,25 +326,654 @@
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 22,
-            "name": "the hero which id is 12 has 'Varian Wrynn' as name",
+            "line": 8,
+            "name": "the hero which name is 'Varian Wrynn' is visble in top heroes grid",
             "match": {
-              "location": "cucumber/step_definitions/part6.step.ts:96"
+              "location": "cucumber/step_definitions/part6.step.ts:164"
             },
             "result": {
               "status": "passed",
-              "duration": 28000000
+              "duration": 39000000
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "match": {
-              "location": "cucumber/step_definitions/part6.step.ts:44"
+              "location": "cucumber/step_definitions/part6.step.ts:45"
             },
             "result": {
               "status": "passed",
-              "duration": 751000000
+              "duration": 813000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Heroes",
+    "line": 1,
+    "id": "heroes",
+    "tags": [],
+    "uri": "cucumber/features/heroes.feature",
+    "elements": [
+      {
+        "id": "heroes;go-on-an-hero-details-page-from-heroes-page",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Go on an hero details page from heroes page",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on toh",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1617000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "has view Heroes",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I click on the heroes button",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 594000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I am on the heroes page",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:122"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "'Narco' link button to his details page is visible",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:94"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I click on 'Narco' link button from heroes page",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:126"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 591000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I am on 'Narco' hero page details",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:109"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I click on the back button from the hero details page",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 604000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I am on the previous page",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 732000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "heroes;add-a-new-hero",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Add a new hero",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "I am on heroes page",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:172"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2144000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I write 'Valeera Sanguinar' in the add input",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:180"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 137000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I click on the add button and 'Valeera Sanguinar' is visible on the heroes page",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:187"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 602000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 739000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "heroes;delete-an-hero",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Delete an hero",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "I am on heroes page",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:172"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2130000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I click on the 'Narco' delete button and the hero is not visible anymore on the heroes page",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 594000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 771000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Initial state",
+    "line": 1,
+    "id": "initial-state",
+    "tags": [],
+    "uri": "cucumber/features/initialState.feature",
+    "elements": [
+      {
+        "id": "initial-state;initial-page",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Initial page",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on toh",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1585000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "has page title 'Tour of Heroes'",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "on the initial page has h1 'Tour of Heroes'",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "has view Dashboard",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "has view Heroes",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "has dashboard as the active view",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 777000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Messages",
+    "line": 1,
+    "id": "messages",
+    "tags": [],
+    "uri": "cucumber/features/messages.feature",
+    "elements": [
+      {
+        "id": "messages;clear-messages-from-dashboard-page",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Clear messages from dashboard page",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on toh",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1567000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "messages page is visible",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:205"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I click on clear button, mesages page is not visible anymore",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:209"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 69000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 736000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "messages;clear-messages-from-heroes-page",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Clear messages from heroes page",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I am on heroes page",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:172"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2132000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "messages page is visible",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:205"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I click on clear button, mesages page is not visible anymore",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:209"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 790000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "messages;clear-messages-from-hero-details-page",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Clear messages from hero details page",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I am on hero details page which its name is 'Narco'",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:133"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2163000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "messages page is visible",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:205"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 76000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I click on clear button, mesages page is not visible anymore",
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:209"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/part6.step.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 763000000
             }
           },
           {
