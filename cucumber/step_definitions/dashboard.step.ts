@@ -1,4 +1,4 @@
-/* import { browser, Button, element, by } from 'protractor';
+import { browser, Button, element, by } from 'protractor';
 import { protractor } from 'protractor/built/ptor';
 import { InitialPage } from '../pages/initialPage.po';
 import { DashboardPage } from '../pages/dashboardPage.po';
@@ -11,16 +11,7 @@ const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 const expect = chai.expect;
 
-Given('I am on toh', function() {
-  browser.get(InitialPage.getUrl());
-  return expect(InitialPage.getRootElement().isDisplayed()).is.eventually.true;
-});
-
-Then('top heroes grid is visible', function() {
-  return expect(DashboardPage.getTopHeroes().isDisplayed()).is.eventually.true;
-});
-
-When('I click on {string} link button from top heroes grid', function(
+When('the user clicks on {string} button from top heroes grid', function(
   heroName
 ) {
   DashboardPage.getHeroButtonByName(heroName).click();
@@ -29,21 +20,43 @@ When('I click on {string} link button from top heroes grid', function(
   );
 });
 
-Then('I am on the hero page details', function() {
-  return expect(browser.getCurrentUrl()).is.eventually.include(
-    HeroDetailsPage.getUrl()
-  );
+Then('the user is on the {string} hero details page', function(heroName) {
+  return expect(
+    HeroDetailsPage.getHeroNameInput().getAttribute('value')
+  ).is.eventually.equal(heroName);
 });
 
-When('I click on the back button from the hero details page', function() {
-  HeroDetailsPage.getBackButton().click();
-  return expect(browser.getCurrentUrl()).is.eventually.not.include(
-    HeroDetailsPage.getUrl()
-  );
+Given('the search bar is visible', function() {
+  return expect(
+    DashboardPage.getSearchInput().isDisplayed()
+  ).is.eventually.true;
 });
 
-Then('I am on the previous page', function() {
-  return expect(browser.getCurrentUrl()).is.eventually.include(
-    InitialPage.getUrl()
+When('the user writes {string} in the search bar', function(searchHeroString) {
+  DashboardPage.getSearchInput().sendKeys(searchHeroString);
+  return expect(
+    DashboardPage.getSearchHeroResult().isDisplayed()
+  ).is.eventually.true;
+});
+
+Then('{string} button is visible in the search result', function(heroName) {
+  return expect(
+    DashboardPage.getSearchHeroButtonByName(heroName).isDisplayed()
+  ).is.eventually.true;
+});
+
+Given('{string} button is displayed in the search result', function(heroName) {
+  DashboardPage.getSearchInput().sendKeys(heroName);
+  return expect(
+    DashboardPage.getSearchHeroButtonByName(heroName).isDisplayed()
+  ).is.eventually.true;
+});
+
+When('the user click on the {string} button from the search result', function(
+  heroName
+) {
+  DashboardPage.getSearchHeroButtonByName(heroName).click();
+  return expect(browser.getCurrentUrl()).is.eventually.not.equal(
+    DashboardPage.getUrl()
   );
-}); */
+});

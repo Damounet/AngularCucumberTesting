@@ -1,6 +1,7 @@
 import { browser, by, element, until } from 'protractor';
+import { Page } from './Page.po';
 
-export class DashboardPage {
+export class DashboardPage implements Page {
   private static url: string = 'http://localhost:4200/dashboard';
 
   public static getUrl() {
@@ -29,5 +30,9 @@ export class DashboardPage {
 
   public static getSearchHeroButtonByName(heroName: string) {
     return element(by.id(heroName + 'SearchButton'));
+  }
+
+  public static getSearchHeroResult() {
+    return element(by.id('heroSearchResult'));
   }
 }

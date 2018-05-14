@@ -1,7 +1,8 @@
 import { browser, by, element, until } from 'protractor';
 import { protractor } from 'protractor/built/ptor';
+import { Page } from './Page.po';
 
-export class InitialPage {
+export class InitialPage implements Page {
   private static url: string = 'http://localhost:4200/';
 
   public static getUrl() {
