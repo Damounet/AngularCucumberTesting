@@ -2,36 +2,50 @@
   {
     "keyword": "Feature",
     "name": "Dashboard",
-    "line": 1,
+    "line": 2,
     "id": "dashboard",
-    "tags": [],
+    "tags": [
+      {
+        "name": "@dashboard",
+        "line": 1
+      }
+    ],
     "uri": "cucumber/features/dashboard.feature",
     "elements": [
       {
         "id": "dashboard;the-user-click-on-narco-in-the-top-heroes-grid",
         "keyword": "Scenario",
-        "line": 7,
+        "line": 15,
         "name": "The user click on Narco in the top heroes grid",
-        "tags": [],
+        "tags": [
+          {
+            "name": "@dashboard",
+            "line": 1
+          },
+          {
+            "name": "@topHeroes",
+            "line": 8
+          }
+        ],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 5,
             "name": "the user is on Tour of Heroes",
             "match": {
               "location": "cucumber/step_definitions/initialState.step.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 1526000000
+              "duration": 1599000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 5,
+            "line": 6,
             "name": "the page displays the dashboard",
             "match": {
               "location": "cucumber/step_definitions/initialState.step.ts:37"
@@ -44,27 +58,37 @@
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 8,
+            "line": 10,
             "name": "the user clicks on 'Narco' button from top heroes grid",
             "match": {
               "location": "cucumber/step_definitions/dashboard.step.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 607000000
+              "duration": 615000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 9,
+            "line": 11,
             "name": "the user is on the 'Narco' hero details page",
             "match": {
               "location": "cucumber/step_definitions/dashboard.step.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 25000000
+              "duration": 23000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
             }
           },
           {
@@ -81,30 +105,130 @@
         ]
       },
       {
-        "id": "dashboard;the-user-look-for-narco-with-the-search",
+        "id": "dashboard;the-user-click-on-narco-in-the-top-heroes-grid",
         "keyword": "Scenario",
-        "line": 11,
-        "name": "The user look for Narco with the search",
-        "tags": [],
+        "line": 16,
+        "name": "The user click on Narco in the top heroes grid",
+        "tags": [
+          {
+            "name": "@dashboard",
+            "line": 1
+          },
+          {
+            "name": "@topHeroes",
+            "line": 8
+          }
+        ],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 5,
             "name": "the user is on Tour of Heroes",
             "match": {
               "location": "cucumber/step_definitions/initialState.step.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 1366000000
+              "duration": 1355000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
+            "line": 6,
+            "name": "the page displays the dashboard",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "the user clicks on 'Magneta' button from top heroes grid",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 604000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "the user is on the 'Magneta' hero details page",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "dashboard;the-user-look-for-narco-with-the-search",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "The user look for Narco with the search",
+        "tags": [
+          {
+            "name": "@dashboard",
+            "line": 1
+          },
+          {
+            "name": "@searchHero",
+            "line": 18
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
             "line": 5,
+            "name": "the user is on Tour of Heroes",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 813000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
             "name": "the page displays the dashboard",
             "match": {
               "location": "cucumber/step_definitions/initialState.step.ts:37"
@@ -117,40 +241,154 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 12,
+            "line": 20,
             "name": "the search bar is visible",
             "match": {
               "location": "cucumber/step_definitions/dashboard.step.ts:29"
             },
             "result": {
               "status": "passed",
-              "duration": 30000000
+              "duration": 29000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 13,
+            "line": 21,
             "name": "the user writes 'Na' in the search bar",
             "match": {
               "location": "cucumber/step_definitions/dashboard.step.ts:35"
             },
             "result": {
               "status": "passed",
-              "duration": 943000000
+              "duration": 936000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 14,
+            "line": 22,
             "name": "'Narco' button is visible in the search result",
             "match": {
               "location": "cucumber/step_definitions/dashboard.step.ts:42"
             },
             "result": {
               "status": "passed",
-              "duration": 30000000
+              "duration": 29000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "dashboard;the-user-look-for-narco-with-the-search",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "The user look for Narco with the search",
+        "tags": [
+          {
+            "name": "@dashboard",
+            "line": 1
+          },
+          {
+            "name": "@searchHero",
+            "line": 18
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "the user is on Tour of Heroes",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 847000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the page displays the dashboard",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "the search bar is visible",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "the user writes 'Gne' in the search bar",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 899000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "'Magneta' button is visible in the search result",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
             }
           },
           {
@@ -168,28 +406,33 @@
       {
         "id": "dashboard;the-user-goes-to-the-narco-details-page-from-search-results",
         "keyword": "Scenario",
-        "line": 16,
+        "line": 36,
         "name": "The user goes to the Narco details page from search results",
-        "tags": [],
+        "tags": [
+          {
+            "name": "@dashboard",
+            "line": 1
+          }
+        ],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 5,
             "name": "the user is on Tour of Heroes",
             "match": {
               "location": "cucumber/step_definitions/initialState.step.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 830000000
+              "duration": 817000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 5,
+            "line": 6,
             "name": "the page displays the dashboard",
             "match": {
               "location": "cucumber/step_definitions/initialState.step.ts:37"
@@ -202,20 +445,20 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 17,
+            "line": 30,
             "name": "'Narco' button is displayed in the search result",
             "match": {
               "location": "cucumber/step_definitions/dashboard.step.ts:48"
             },
             "result": {
               "status": "passed",
-              "duration": 913000000
+              "duration": 907000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 18,
+            "line": 31,
             "name": "the user click on the 'Narco' button from the search result",
             "match": {
               "location": "cucumber/step_definitions/dashboard.step.ts:55"
@@ -228,14 +471,24 @@
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 19,
+            "line": 32,
             "name": "the user is on the 'Narco' hero details page",
             "match": {
               "location": "cucumber/step_definitions/dashboard.step.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 20000000
+              "duration": 23000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
             }
           },
           {
@@ -245,8 +498,107 @@
               "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
             },
             "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "dashboard;the-user-goes-to-the-narco-details-page-from-search-results",
+        "keyword": "Scenario",
+        "line": 37,
+        "name": "The user goes to the Narco details page from search results",
+        "tags": [
+          {
+            "name": "@dashboard",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "the user is on Tour of Heroes",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:14"
+            },
+            "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 815000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the page displays the dashboard",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 30,
+            "name": "'Magneta' button is displayed in the search result",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 913000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "the user click on the 'Magneta' button from the search result",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 590000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 32,
+            "name": "the user is on the 'Magneta' hero details page",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed"
             }
           }
         ]
@@ -264,7 +616,7 @@
       {
         "id": "herodetails-page;the-user-modifies-the-hero-name-and-come-back-to-dashboard-page-using-the-save-button",
         "keyword": "Scenario",
-        "line": 6,
+        "line": 7,
         "name": "The user modifies the hero name and come back to dashboard page using the save button",
         "tags": [],
         "type": "scenario",
@@ -279,39 +631,39 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1423000000
+              "duration": 1397000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 7,
+            "line": 8,
             "name": "the user types 'Ragnaros the firelord' in the name bar",
             "match": {
               "location": "cucumber/step_definitions/heroDetails.step.ts:22"
             },
             "result": {
               "status": "passed",
-              "duration": 164000000
+              "duration": 158000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 8,
+            "line": 9,
             "name": "the user click on the save button",
             "match": {
               "location": "cucumber/step_definitions/heroDetails.step.ts:30"
             },
             "result": {
               "status": "passed",
-              "duration": 590000000
+              "duration": 587000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 9,
+            "line": 10,
             "name": "the user come back to the dashboard page",
             "match": {
               "location": "cucumber/step_definitions/heroDetails.step.ts:37"
@@ -324,14 +676,24 @@
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 10,
+            "line": 11,
             "name": "'Ragnaros the firelord' is visible in the top heroes grid",
             "match": {
               "location": "cucumber/step_definitions/heroDetails.step.ts:43"
             },
             "result": {
               "status": "passed",
-              "duration": 29000000
+              "duration": 30000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
             }
           },
           {
@@ -349,7 +711,7 @@
       {
         "id": "herodetails-page;the-user-come-back-to-dashboard-page-using-the-back-button",
         "keyword": "Scenario",
-        "line": 12,
+        "line": 13,
         "name": "The user come back to dashboard page using the back button",
         "tags": [],
         "type": "scenario",
@@ -364,26 +726,26 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1408000000
+              "duration": 1387000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 13,
+            "line": 14,
             "name": "the user click on the back button",
             "match": {
               "location": "cucumber/step_definitions/heroDetails.step.ts:49"
             },
             "result": {
               "status": "passed",
-              "duration": 599000000
+              "duration": 594000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 14,
+            "line": 15,
             "name": "the user come back to the dashboard page",
             "match": {
               "location": "cucumber/step_definitions/heroDetails.step.ts:37"
@@ -391,6 +753,16 @@
             "result": {
               "status": "passed",
               "duration": 11000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
             }
           },
           {
@@ -433,7 +805,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1399000000
+              "duration": 1393000000
             }
           },
           {
@@ -446,7 +818,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 103000000
+              "duration": 98000000
             }
           },
           {
@@ -459,7 +831,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 590000000
+              "duration": 587000000
             }
           },
           {
@@ -472,7 +844,17 @@
             },
             "result": {
               "status": "passed",
-              "duration": 30000000
+              "duration": 29000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
             }
           },
           {
@@ -505,7 +887,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1401000000
+              "duration": 1436000000
             }
           },
           {
@@ -518,7 +900,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 595000000
+              "duration": 590000000
             }
           },
           {
@@ -538,10 +920,21 @@
             "keyword": "After",
             "hidden": true,
             "match": {
-              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+              "location": "cucumber/step_definitions/common.step.ts:5"
             },
             "result": {
               "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -564,7 +957,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1400000000
+              "duration": 1364000000
             }
           },
           {
@@ -577,7 +970,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 589000000
+              "duration": 594000000
             }
           },
           {
@@ -590,7 +983,17 @@
             },
             "result": {
               "status": "passed",
-              "duration": 23000000
+              "duration": 25000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
             }
           },
           {
@@ -633,7 +1036,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 841000000
+              "duration": 816000000
             }
           },
           {
@@ -646,7 +1049,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 11000000
+              "duration": 12000000
             }
           },
           {
@@ -672,7 +1075,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29000000
+              "duration": 28000000
             }
           },
           {
@@ -698,7 +1101,17 @@
             },
             "result": {
               "status": "passed",
-              "duration": 18000000
+              "duration": 19000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
             }
           },
           {
@@ -732,7 +1145,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 825000000
+              "duration": 807000000
             }
           },
           {
@@ -765,6 +1178,16 @@
             "keyword": "After",
             "hidden": true,
             "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
               "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
             },
             "result": {
@@ -791,7 +1214,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1384000000
+              "duration": 1390000000
             }
           },
           {
@@ -804,7 +1227,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 589000000
+              "duration": 591000000
             }
           },
           {
@@ -817,7 +1240,17 @@
             },
             "result": {
               "status": "passed",
-              "duration": 10000000
+              "duration": 12000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
             }
           },
           {
@@ -861,7 +1294,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 829000000
+              "duration": 813000000
             }
           },
           {
@@ -887,7 +1320,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 65000000
+              "duration": 63000000
             }
           },
           {
@@ -907,10 +1340,21 @@
             "keyword": "After",
             "hidden": true,
             "match": {
-              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+              "location": "cucumber/step_definitions/common.step.ts:5"
             },
             "result": {
               "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -933,7 +1377,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1378000000
+              "duration": 1411000000
             }
           },
           {
@@ -946,7 +1390,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 24000000
+              "duration": 23000000
             }
           },
           {
@@ -959,7 +1403,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 64000000
+              "duration": 74000000
             }
           },
           {
@@ -972,7 +1416,17 @@
             },
             "result": {
               "status": "passed",
-              "duration": 15000000
+              "duration": 13000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
             }
           },
           {
@@ -1005,7 +1459,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1408000000
+              "duration": 1397000000
             }
           },
           {
@@ -1018,7 +1472,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 24000000
+              "duration": 23000000
             }
           },
           {
@@ -1031,7 +1485,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 126000000
+              "duration": 60000000
             }
           },
           {
@@ -1045,6 +1499,16 @@
             "result": {
               "status": "passed",
               "duration": 13000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
             }
           },
           {

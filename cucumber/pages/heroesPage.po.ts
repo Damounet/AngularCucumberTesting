@@ -1,7 +1,7 @@
 import { browser, by, element, until } from 'protractor';
-import { Page } from './Page.po';
 
-export class HeroesPage implements Page {
+export class HeroesPage {
+  //private static abstract getProps
   private static url: string = 'http://localhost:4200/heroes';
 
   public static getUrl() {

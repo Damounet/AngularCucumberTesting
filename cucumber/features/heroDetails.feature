@@ -2,6 +2,7 @@ Feature: Herodetails page
 
     Background: The user is on the Narco hero details page
         Given the user is on the 'Narco' details page
+            
 
     Scenario: The user modifies the hero name and come back to dashboard page using the save button
         When the user types 'Ragnaros the firelord' in the name bar

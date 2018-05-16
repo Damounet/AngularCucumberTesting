@@ -8,6 +8,8 @@ exports.config = {
   specs: ['./e2e/**/*.e2e-spec.ts'],
   capabilities: {
     browserName: 'chrome'
+    /* shardTestFiles: true,
+    maxInstances: 3 */
   },
   //seleniumAddress: 'http://localhost:4444/wd/hub',
   directConnect: true,
@@ -19,7 +21,7 @@ exports.config = {
     compiler: 'ts:ts-node/register',
     format: ['json:cucumber/reports/json/result.json'],
     require: ['cucumber/step_definitions/*.ts']
-    //tags help us execute specific scenarios of feature files
+    //tags: '@dashboard'
   },
   onPrepare() {
     require('ts-node').register({
