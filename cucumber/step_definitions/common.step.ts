@@ -1,6 +1,6 @@
 import { browser } from 'protractor';
 
-var { After, Status } = require('cucumber');
+var { After, Status, setDefinitionFunctionWrapper } = require('cucumber');
 
 After(function(testCase) {
   var world = this;
@@ -11,3 +11,16 @@ After(function(testCase) {
     });
   }
 });
+
+/* function takeScreenshotToReport() {
+  var world = this;
+  return browser.takeScreenshot().then(function(screenShot) {
+    // screenShot is a base-64 encoded PNG
+    world.attach(screenShot, 'image/png');
+  });
+}
+
+setDefinitionFunctionWrapper(function(fn) {
+  fn = takeScreenshotToReport();
+  return fn;
+}); */

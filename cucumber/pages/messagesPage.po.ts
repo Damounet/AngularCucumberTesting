@@ -1,18 +1,20 @@
 import { browser, by, element, until } from 'protractor';
 import { protractor } from 'protractor/built/ptor';
+import { BasePage } from './basePage.po';
 
-export class MessagesPage {
-  private static url: string = 'http://localhost:4200/';
+export class MessagesPage implements BasePage {
+  url: string = 'http://localhost:4200/';
 
-  public static getUrl() {
+  public getUrl() {
     return this.url;
   }
 
-  public static getRootElement() {
+  public getRootElement() {
     return element(by.id('messagesPage'));
   }
 
-  public static getClearButton() {
+  public getClearButton() {
     return element(by.id('clearButton'));
   }
 }
+export const messagesPage = new MessagesPage();

@@ -22,12 +22,43 @@ First you need to run the Tour of Heroes application :
 
 `protractor protractor-toh.conf.js`
 
-### Running tour of heroes cucumber functionnal tests:
+## Running tour of heroes cucumber functionnal tests:
 
 `protractor protractor-cucumber.conf.js` to run all tests with all features files
 `protractor protractor-cucumber.conf.js --specs cucumber/features/heroes.feature` to run test on a specific feature file
 
-#### Running your tests with cucumber tags:
+## Running your tests with cucumber tags:
 
 To use tags you need to uncomment the tags properties in the `protractor-cucumber.conf.js` and add your own tags
 Then you can launch your test with either the first or the second way
+
+## Running your test with parallel execution
+
+You need to uncomment these lines :
+
+```
+/* ,
+shardTestFiles: true,
+maxInstances: 3 */
+```
+
+in the `protractor-cucumber.conf.js` file
+You can modify the maxInstances number if you need more of them.
+WARNING : The html report won't be relevant after a parallel execution test
+
+## Generating the html report
+
+First, you need to run the tour of heroes cucumber functionnal tests with `protractor protractor-cucumber.conf.js`
+Then you need to run `node index.js`
+
+# Writing the features files
+
+[How to write features files](./features/README.md)
+
+# Writing the steps files
+
+[How to write steps files](./step_definitions/README.md)
+
+# Writing the pages files
+
+[How to write pages files](./pages/README.md)

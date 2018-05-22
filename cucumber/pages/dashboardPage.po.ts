@@ -1,37 +1,39 @@
 import { browser, by, element, until } from 'protractor';
+import { BasePage } from './basePage.po';
 
-export class DashboardPage {
-  private static url: string = 'http://localhost:4200/dashboard';
+export class DashboardPage implements BasePage {
+  url: string = 'http://localhost:4200/dashboard';
 
-  public static getUrl() {
+  public getUrl() {
     return this.url;
   }
 
-  public static getRootElement() {
+  public getRootElement() {
     return element(by.id('dashboardPage'));
   }
 
-  public static getTopHeroes() {
+  public getTopHeroes() {
     return element(by.id('topHeroesGrid'));
   }
 
-  public static getHeroButtonByName(heroName: string) {
+  public getHeroButtonByName(heroName: string) {
     return element(by.id(heroName + 'Button'));
   }
 
-  public static getSearchRootElement() {
+  public getSearchRootElement() {
     return element(by.id('search-component'));
   }
 
-  public static getSearchInput() {
+  public getSearchInput() {
     return element(by.id('search-box'));
   }
 
-  public static getSearchHeroButtonByName(heroName: string) {
+  public getSearchHeroButtonByName(heroName: string) {
     return element(by.id(heroName + 'SearchButton'));
   }
 
-  public static getSearchHeroResult() {
+  public getSearchHeroResult() {
     return element(by.id('heroSearchResult'));
   }
 }
+export const dashboardPage = new DashboardPage();

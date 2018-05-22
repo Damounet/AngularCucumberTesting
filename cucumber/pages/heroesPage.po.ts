@@ -1,46 +1,30 @@
 import { browser, by, element, until } from 'protractor';
+import { BasePage } from './basePage.po';
+export class HeroesPage implements BasePage {
+  url: string = 'http://localhost:4200/heroes';
 
-export class HeroesPage {
-  //private static abstract getProps
-  private static url: string = 'http://localhost:4200/heroes';
-
-  public static getUrl() {
+  public getUrl() {
     return this.url;
   }
 
-  public static getRootElement() {
+  public getRootElement() {
     return element(by.id('heroesPage'));
   }
 
-  public static getHeroButtonByName(heroName: string) {
+  public getHeroButtonByName(heroName: string) {
     return element(by.id(heroName + 'Button'));
   }
 
-  public static getAddHeroInput() {
+  public getAddHeroInput() {
     return element(by.id('addHeroInput'));
   }
 
-  public static getAddButton() {
+  public getAddButton() {
     return element(by.id('addButton'));
   }
 
-  public static getDeleteButtonByName(heroName: string) {
+  public getDeleteButtonByName(heroName: string) {
     return element(by.id(heroName + 'DeleteButton'));
   }
-
-  /* public static getTopHeroes() {
-    return element(by.id('topHeroesGrid'));
-  }
-  
-  public static getSearchRootElement() {
-    return element(by.id('search-component'));
-  }
-
-  public static getSearchInput() {
-    return element(by.id('search-box'));
-  }
-
-  public static getSearchHeroButtonByName(heroName: string) {
-    return element(by.id(heroName + 'SearchButton'));
-  } */
 }
+export const heroesPage = new HeroesPage();

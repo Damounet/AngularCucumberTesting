@@ -39,7 +39,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1599000000
+              "duration": 1670000000
             }
           },
           {
@@ -52,7 +52,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29000000
+              "duration": 30000000
             }
           },
           {
@@ -65,7 +65,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 615000000
+              "duration": 611000000
             }
           },
           {
@@ -78,7 +78,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 23000000
+              "duration": 25000000
             }
           },
           {
@@ -98,8 +98,7 @@
               "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -131,7 +130,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1355000000
+              "duration": 1313000000
             }
           },
           {
@@ -144,7 +143,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 26000000
+              "duration": 25000000
             }
           },
           {
@@ -157,7 +156,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 604000000
+              "duration": 599000000
             }
           },
           {
@@ -170,7 +169,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 23000000
+              "duration": 20000000
             }
           },
           {
@@ -190,7 +189,8 @@
               "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -222,7 +222,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 813000000
+              "duration": 820000000
             }
           },
           {
@@ -248,7 +248,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29000000
+              "duration": 31000000
             }
           },
           {
@@ -261,7 +261,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 936000000
+              "duration": 946000000
             }
           },
           {
@@ -274,7 +274,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29000000
+              "duration": 30000000
             }
           },
           {
@@ -326,7 +326,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 847000000
+              "duration": 829000000
             }
           },
           {
@@ -339,7 +339,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 23000000
+              "duration": 25000000
             }
           },
           {
@@ -365,7 +365,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 899000000
+              "duration": 902000000
             }
           },
           {
@@ -378,7 +378,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29000000
+              "duration": 28000000
             }
           },
           {
@@ -426,7 +426,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 817000000
+              "duration": 819000000
             }
           },
           {
@@ -439,7 +439,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 24000000
+              "duration": 26000000
             }
           },
           {
@@ -452,7 +452,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 907000000
+              "duration": 909000000
             }
           },
           {
@@ -465,7 +465,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 593000000
+              "duration": 592000000
             }
           },
           {
@@ -526,7 +526,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 815000000
+              "duration": 814000000
             }
           },
           {
@@ -539,7 +539,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 24000000
+              "duration": 25000000
             }
           },
           {
@@ -552,7 +552,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 913000000
+              "duration": 917000000
             }
           },
           {
@@ -565,7 +565,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 590000000
+              "duration": 593000000
             }
           },
           {
@@ -578,7 +578,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 19000000
+              "duration": 22000000
             }
           },
           {
@@ -598,7 +598,8 @@
               "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -627,11 +628,11 @@
             "line": 4,
             "name": "the user is on the 'Narco' details page",
             "match": {
-              "location": "cucumber/step_definitions/heroDetails.step.ts:14"
+              "location": "cucumber/step_definitions/heroDetails.step.ts:13"
             },
             "result": {
               "status": "passed",
-              "duration": 1397000000
+              "duration": 1413000000
             }
           },
           {
@@ -640,11 +641,11 @@
             "line": 8,
             "name": "the user types 'Ragnaros the firelord' in the name bar",
             "match": {
-              "location": "cucumber/step_definitions/heroDetails.step.ts:22"
+              "location": "cucumber/step_definitions/heroDetails.step.ts:21"
             },
             "result": {
               "status": "passed",
-              "duration": 158000000
+              "duration": 174000000
             }
           },
           {
@@ -653,11 +654,11 @@
             "line": 9,
             "name": "the user click on the save button",
             "match": {
-              "location": "cucumber/step_definitions/heroDetails.step.ts:30"
+              "location": "cucumber/step_definitions/heroDetails.step.ts:29"
             },
             "result": {
               "status": "passed",
-              "duration": 587000000
+              "duration": 589000000
             }
           },
           {
@@ -666,11 +667,11 @@
             "line": 10,
             "name": "the user come back to the dashboard page",
             "match": {
-              "location": "cucumber/step_definitions/heroDetails.step.ts:37"
+              "location": "cucumber/step_definitions/heroDetails.step.ts:36"
             },
             "result": {
               "status": "passed",
-              "duration": 530000000
+              "duration": 529000000
             }
           },
           {
@@ -679,11 +680,11 @@
             "line": 11,
             "name": "'Ragnaros the firelord' is visible in the top heroes grid",
             "match": {
-              "location": "cucumber/step_definitions/heroDetails.step.ts:43"
+              "location": "cucumber/step_definitions/heroDetails.step.ts:42"
             },
             "result": {
               "status": "passed",
-              "duration": 30000000
+              "duration": 33000000
             }
           },
           {
@@ -703,7 +704,8 @@
               "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -722,11 +724,11 @@
             "line": 4,
             "name": "the user is on the 'Narco' details page",
             "match": {
-              "location": "cucumber/step_definitions/heroDetails.step.ts:14"
+              "location": "cucumber/step_definitions/heroDetails.step.ts:13"
             },
             "result": {
               "status": "passed",
-              "duration": 1387000000
+              "duration": 1393000000
             }
           },
           {
@@ -735,11 +737,11 @@
             "line": 14,
             "name": "the user click on the back button",
             "match": {
-              "location": "cucumber/step_definitions/heroDetails.step.ts:49"
+              "location": "cucumber/step_definitions/heroDetails.step.ts:48"
             },
             "result": {
               "status": "passed",
-              "duration": 594000000
+              "duration": 615000000
             }
           },
           {
@@ -748,7 +750,7 @@
             "line": 15,
             "name": "the user come back to the dashboard page",
             "match": {
-              "location": "cucumber/step_definitions/heroDetails.step.ts:37"
+              "location": "cucumber/step_definitions/heroDetails.step.ts:36"
             },
             "result": {
               "status": "passed",
@@ -772,7 +774,8 @@
               "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -805,7 +808,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1393000000
+              "duration": 1405000000
             }
           },
           {
@@ -814,11 +817,11 @@
             "line": 7,
             "name": "the user writes 'Varian Wrynn' in the add bar",
             "match": {
-              "location": "cucumber/step_definitions/heroes.step.ts:15"
+              "location": "cucumber/step_definitions/heroes.step.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 98000000
+              "duration": 101000000
             }
           },
           {
@@ -827,11 +830,11 @@
             "line": 8,
             "name": "the user click on the add button",
             "match": {
-              "location": "cucumber/step_definitions/heroes.step.ts:22"
+              "location": "cucumber/step_definitions/heroes.step.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 587000000
+              "duration": 590000000
             }
           },
           {
@@ -840,11 +843,11 @@
             "line": 9,
             "name": "'Varian Wrynn' is displayed in the heroes list",
             "match": {
-              "location": "cucumber/step_definitions/heroes.step.ts:29"
+              "location": "cucumber/step_definitions/heroes.step.ts:26"
             },
             "result": {
               "status": "passed",
-              "duration": 29000000
+              "duration": 31000000
             }
           },
           {
@@ -864,7 +867,8 @@
               "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -887,7 +891,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1436000000
+              "duration": 1427000000
             }
           },
           {
@@ -896,11 +900,11 @@
             "line": 12,
             "name": "the user click on the 'Narco' delete button",
             "match": {
-              "location": "cucumber/step_definitions/heroes.step.ts:35"
+              "location": "cucumber/step_definitions/heroes.step.ts:32"
             },
             "result": {
               "status": "passed",
-              "duration": 590000000
+              "duration": 587000000
             }
           },
           {
@@ -909,11 +913,11 @@
             "line": 13,
             "name": "'Narco' is not present anymore in the heroes list",
             "match": {
-              "location": "cucumber/step_definitions/heroes.step.ts:42"
+              "location": "cucumber/step_definitions/heroes.step.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 12000000
+              "duration": 14000000
             }
           },
           {
@@ -957,7 +961,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1364000000
+              "duration": 1436000000
             }
           },
           {
@@ -966,11 +970,11 @@
             "line": 16,
             "name": "the user click on the 'Narco' button",
             "match": {
-              "location": "cucumber/step_definitions/heroes.step.ts:48"
+              "location": "cucumber/step_definitions/heroes.step.ts:45"
             },
             "result": {
               "status": "passed",
-              "duration": 594000000
+              "duration": 588000000
             }
           },
           {
@@ -983,7 +987,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 25000000
+              "duration": 24000000
             }
           },
           {
@@ -993,7 +997,8 @@
               "location": "cucumber/step_definitions/common.step.ts:5"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -1036,7 +1041,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 816000000
+              "duration": 819000000
             }
           },
           {
@@ -1062,7 +1067,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 30000000
+              "duration": 33000000
             }
           },
           {
@@ -1101,7 +1106,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 19000000
+              "duration": 20000000
             }
           },
           {
@@ -1145,7 +1150,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 807000000
+              "duration": 821000000
             }
           },
           {
@@ -1158,7 +1163,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 587000000
+              "duration": 589000000
             }
           },
           {
@@ -1214,7 +1219,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1390000000
+              "duration": 1388000000
             }
           },
           {
@@ -1240,7 +1245,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 12000000
+              "duration": 10000000
             }
           },
           {
@@ -1260,8 +1265,7 @@
               "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -1294,7 +1298,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 813000000
+              "duration": 816000000
             }
           },
           {
@@ -1303,11 +1307,11 @@
             "line": 5,
             "name": "the message page is visible",
             "match": {
-              "location": "cucumber/step_definitions/messages.step.ts:16"
+              "location": "cucumber/step_definitions/messages.step.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 28000000
+              "duration": 29000000
             }
           },
           {
@@ -1316,11 +1320,11 @@
             "line": 6,
             "name": "the user click on the clear button",
             "match": {
-              "location": "cucumber/step_definitions/messages.step.ts:20"
+              "location": "cucumber/step_definitions/messages.step.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 63000000
+              "duration": 65000000
             }
           },
           {
@@ -1329,11 +1333,11 @@
             "line": 7,
             "name": "the messages page is not visible anymore",
             "match": {
-              "location": "cucumber/step_definitions/messages.step.ts:27"
+              "location": "cucumber/step_definitions/messages.step.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 14000000
+              "duration": 13000000
             }
           },
           {
@@ -1353,8 +1357,7 @@
               "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -1377,7 +1380,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1411000000
+              "duration": 1387000000
             }
           },
           {
@@ -1386,7 +1389,7 @@
             "line": 11,
             "name": "the message page is visible",
             "match": {
-              "location": "cucumber/step_definitions/messages.step.ts:16"
+              "location": "cucumber/step_definitions/messages.step.ts:12"
             },
             "result": {
               "status": "passed",
@@ -1399,11 +1402,11 @@
             "line": 12,
             "name": "the user click on the clear button",
             "match": {
-              "location": "cucumber/step_definitions/messages.step.ts:20"
+              "location": "cucumber/step_definitions/messages.step.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 74000000
+              "duration": 63000000
             }
           },
           {
@@ -1412,7 +1415,7 @@
             "line": 13,
             "name": "the messages page is not visible anymore",
             "match": {
-              "location": "cucumber/step_definitions/messages.step.ts:27"
+              "location": "cucumber/step_definitions/messages.step.ts:23"
             },
             "result": {
               "status": "passed",
@@ -1455,11 +1458,11 @@
             "line": 16,
             "name": "the user is on the 'Narco' details page",
             "match": {
-              "location": "cucumber/step_definitions/heroDetails.step.ts:14"
+              "location": "cucumber/step_definitions/heroDetails.step.ts:13"
             },
             "result": {
               "status": "passed",
-              "duration": 1397000000
+              "duration": 1407000000
             }
           },
           {
@@ -1468,11 +1471,11 @@
             "line": 17,
             "name": "the message page is visible",
             "match": {
-              "location": "cucumber/step_definitions/messages.step.ts:16"
+              "location": "cucumber/step_definitions/messages.step.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 23000000
+              "duration": 24000000
             }
           },
           {
@@ -1481,11 +1484,11 @@
             "line": 18,
             "name": "the user click on the clear button",
             "match": {
-              "location": "cucumber/step_definitions/messages.step.ts:20"
+              "location": "cucumber/step_definitions/messages.step.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 60000000
+              "duration": 58000000
             }
           },
           {
@@ -1494,11 +1497,11 @@
             "line": 19,
             "name": "the messages page is not visible anymore",
             "match": {
-              "location": "cucumber/step_definitions/messages.step.ts:27"
+              "location": "cucumber/step_definitions/messages.step.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 13000000
+              "duration": 14000000
             }
           },
           {

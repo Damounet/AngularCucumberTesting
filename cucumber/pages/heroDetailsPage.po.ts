@@ -1,25 +1,26 @@
 import { browser, by, element, until } from 'protractor';
+import { BasePage } from './basePage.po';
+export class HeroDetailsPage implements BasePage {
+  url: string = 'http://localhost:4200/detail';
 
-export class HeroDetailsPage {
-  private static url: string = 'http://localhost:4200/detail';
-
-  public static getUrl() {
+  public getUrl() {
     return this.url;
   }
 
-  public static getRootElement() {
+  public getRootElement() {
     return element(by.id('heroDetailsPage'));
   }
 
-  public static getHeroNameInput() {
+  public getHeroNameInput() {
     return element(by.id('heroNameInput'));
   }
 
-  public static getSaveButton() {
+  public getSaveButton() {
     return element(by.id('heroSaveButton'));
   }
 
-  public static getBackButton() {
+  public getBackButton() {
     return element(by.id('heroBackButton'));
   }
 }
+export const heroDetailsPage = new HeroDetailsPage();

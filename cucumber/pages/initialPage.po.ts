@@ -1,26 +1,28 @@
 import { browser, by, element, until } from 'protractor';
 import { protractor } from 'protractor/built/ptor';
+import { BasePage } from './basePage.po';
 
-export class InitialPage {
-  private static url: string = 'http://localhost:4200/';
+export class InitialPage implements BasePage {
+  url: string = 'http://localhost:4200/';
 
-  public static getUrl() {
+  public getUrl() {
     return this.url;
   }
 
-  public static getRootElement() {
+  public getRootElement() {
     return element(by.id('initialPage'));
   }
 
-  public static getApplicationName() {
+  public getApplicationName() {
     return element(by.id('initialTitle')).getText();
   }
 
-  public static getDashboardButton() {
+  public getDashboardButton() {
     return element(by.id('linkDashBoard'));
   }
 
-  public static getHeroesButton() {
+  public getHeroesButton() {
     return element(by.id('linkHeroes'));
   }
 }
+export const initialPage = new InitialPage();

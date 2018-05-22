@@ -7,8 +7,8 @@ exports.config = {
   allScriptsTimeout: 11000,
   specs: ['./e2e/**/*.e2e-spec.ts'],
   capabilities: {
-    browserName: 'chrome'
-    /* shardTestFiles: true,
+    browserName: 'chrome' /* ,
+    shardTestFiles: true,
     maxInstances: 3 */
   },
   //seleniumAddress: 'http://localhost:4444/wd/hub',
