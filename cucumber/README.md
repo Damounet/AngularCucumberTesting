@@ -1,43 +1,37 @@
 # angularFunctionnalTesting
 
 Testing the Tour of Heroes Tutorial app using protractor and cucumber.
+[How to write features files](./features)|[How to write steps files](./step_definitions)|[How to write pages files](./pages)
 
-# Writing the features files
+# Dependencies
 
-[How to write features files](./features)
-
-# Writing the steps files
-
-[How to write steps files](./step_definitions)
-
-# Writing the pages files
-
-[How to write pages files](./pages)
+[Cucumber JS](https://github.com/cucumber/cucumber-js)
+[Protractor Cucumber Framework](https://github.com/protractor-cucumber-framework/protractor-cucumber-framework)
 
 # Installation
 
 Install all the dependencies using :
 
-`yarn install`
+> `yarn install`
 
 In order to run the protractors tests you need to get the selenium drivers with :
 
-`yarn webdriver-manager update`
+> `yarn webdriver-manager update`
 
 # Running the tests
 
 First you need to run the Tour of Heroes application :
 
-`yarn run start` (which simply does a `ng serve`)
+> `yarn run start` (which simply does a `ng serve`)
 
 ## Running tour of heroes functionnal tests:
 
-`protractor protractor-toh.conf.js`
+> `protractor protractor-toh.conf.js`
 
 ## Running tour of heroes cucumber functionnal tests:
 
-`protractor protractor-cucumber.conf.js` to run all tests with all features files
-`protractor protractor-cucumber.conf.js --specs cucumber/features/heroes.feature` to run test on a specific feature file
+> `protractor protractor-cucumber.conf.js` to run all tests with all features files
+> `protractor protractor-cucumber.conf.js --specs cucumber/features/heroes.feature` to run test on a specific feature file
 
 ## Running your tests with cucumber tags:
 
@@ -60,5 +54,8 @@ WARNING : The html report won't be relevant after a parallel execution test
 
 ## Generating the html report
 
-First, you need to run the tour of heroes cucumber functionnal tests with `protractor protractor-cucumber.conf.js`
-Then you need to run `node index.js`
+First, you need to run the tour of heroes cucumber functionnal tests with
+
+> `protractor protractor-cucumber.conf.js`
+> Then you need to run
+> `node index.js`

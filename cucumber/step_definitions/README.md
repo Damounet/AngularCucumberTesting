@@ -1,15 +1,24 @@
 # angularFunctionnalTesting
 
 Testing the Tour of Heroes Tutorial app using protractor and cucumber.
+[How to install and run the functionnal tests](../)|[How to write features files](../features)|[How to write pages files](../pages)
 
-# Installation and running the functionnal tests
+# Steps files
 
-[How to install and run the functionnal tests](../)
+## Steps
 
-# Writing the features files
+### Given
 
-[How to write features files](../features)
+### When
 
-# Writing the pages files
+### Then
 
-[How to write pages files](../pages)
+## How to validate a step
+
+## Import
+
+## Templates from cucumber
+
+## Templates
+
+## Our best practices
