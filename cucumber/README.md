@@ -2,6 +2,18 @@
 
 Testing the Tour of Heroes Tutorial app using protractor and cucumber.
 
+# Writing the features files
+
+[How to write features files](./features)
+
+# Writing the steps files
+
+[How to write steps files](./step_definitions)
+
+# Writing the pages files
+
+[How to write pages files](./pages)
+
 # Installation
 
 Install all the dependencies using :
@@ -50,15 +62,3 @@ WARNING : The html report won't be relevant after a parallel execution test
 
 First, you need to run the tour of heroes cucumber functionnal tests with `protractor protractor-cucumber.conf.js`
 Then you need to run `node index.js`
-
-# Writing the features files
-
-[How to write features files](./features/README.md)
-
-# Writing the steps files
-
-[How to write steps files](./step_definitions/README.md)
-
-# Writing the pages files
-
-[How to write pages files](./pages/README.md)
