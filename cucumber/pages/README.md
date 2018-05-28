@@ -5,6 +5,8 @@ Testing the Tour of Heroes Tutorial app using protractor and cucumber.
 
 # Pages files
 
+    
+
 ## Base page
 
 ## Some templates
