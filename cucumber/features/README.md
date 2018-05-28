@@ -4,35 +4,32 @@
 
 # Gherkin
 
-```
     Feature: Initial state
         Scenario: The user goes on the heroes page from the initial page
            Given the user is on Tour of Heroes
            When the user click on heroes button
            Then the user is on the heroes page
-```
 
-The code above is write with Gherkin.
+The code above is written with Gherkin.
 This is basically a language which is use to write functionnal testing.
 As you can see it is really close to english speaking.
 
-**Gherkin** is working with keywords which are starting all the Gherkin phrases.
-Let's see these more precisely.
+Gherkin is working with keywords which are starting all the Gherkin phrases.
 
 ## Feature
 
-    > Feature: Initial state
+    Feature: Initial state
 
-    Feature is exactly what it says, it is the Feature functionnal description.
-    Don't hesitate to be as precise as possible. The more precise it is, the more understandable it is.
-    This is in the Feature space that you have to describe the user story environment.
+This is the Feature functionnal description.
+Be as precise as possible.
+Here, you have to describe the user story environment.
 
 ## Scenario
 
-    >   Scenario: The user goes on the heroes page from the initial page
+    Scenario: The user goes on the heroes page from the initial page
 
-    As the Feature keyword, Scenario is describing the scenario as precisely as possible.
-    For one Feature, it is possible and common to have more than one Scenario.
+This is the Scenario functionnal description.
+For one Feature, it is possible and common to have more than one Scenario.
 
 ## Steps
 
@@ -40,26 +37,12 @@ Let's see these more precisely.
     >       When the user click on heroes button
     >       Then the user is on the heroes page
 
-    All the phrases which are in a scenario and starting with the keywords Given, When or Then are
-    called Steps.
+All the phrases which are in a scenario and started with the keywords Given, When or Then are
+called Steps.
 
-### Given
-
-    >       Given the user is on Tour of Heroes
-
-    The keyword Given is always describing a scenario context.
-
-### When
-
-    >       When the user click on heroes button
-
-    The keyword When is always describing an user action.
-
-### Then
-
-    >       Then the user is on the heroes page
-
-    The keyword Then is checking a result from an user action.
+* The keyword **Given** is always described a scenario context.
+* The keyword **When** is always described an user action.
+* The keyword **Then** is checked a result from an user action.
 
 ## Background
 
