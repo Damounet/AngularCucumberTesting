@@ -88,7 +88,8 @@ Testing the Tour of Heroes Tutorial app using protractor and cucumber.
     >   | 'Magneta' |
 
     An examples table is used to give some values to the Scenario outline placeholders.
-    This one has some values for the heroName placeholder, these values are 'Narco' and 'Magneta'. Then, the concerned Scenario outline will be played two times with the two differents values.
+    This one has some values for the heroName placeholder, these values are 'Narco' and 'Magneta'.
+    Then, the concerned Scenario outline will be played two times with the two differents values.
 
 # Our best practices
 
