@@ -1,6 +1,6 @@
-[How to install and run the functionnal tests](../)
-[How to write steps files](../step_definitions)
-[How to write pages files](../pages)
+* [How to install and run the functionnal tests](../)
+* [How to write steps files](../step_definitions)
+* [How to write pages files](../pages)
 
 # Gherkin
 
