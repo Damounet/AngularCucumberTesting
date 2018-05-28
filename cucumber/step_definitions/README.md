@@ -107,8 +107,61 @@ Testing the Tour of Heroes Tutorial app using protractor and cucumber.
 
 ## Import/Require
 
+    > import { browser, Button, element, by } from 'protractor';
+    > import { protractor } from 'protractor/built/ptor';
+    > import { InitialPage } from '../pages/initialPage.po';
+
+    > var { Given, When, Then, After } = require('cucumber');
+    > const path = require('path');
+    > const chai = require('chai');
+    > const chaiAsPromised = require('chai-as-promised');
+    > chai.use(chaiAsPromised);
+    > const expect = chai.expect;
+
+    Basically, an import or a require signaling to the compiler that the file is needind some more
+    things to works. To write a steps file, you need, at least, four things :
+        - Some tools from protractor
+        - The pages objects which are used in the steps file
+        - Some tools from cucumber
+        - And chai/chaiAsPromised to use the expect() things
+
+    Just copy/paste these import/require above all of your step files, modify and add the pages
+    imports.
+
 ## Templates from cucumber
 
+    When your feature file is ready, without your step file, try to lauch your functionnal test with :
+        > `protractor protractor-cucumber.conf.js`
+    If your feature file is good, then the command console will give you all your steps template
+    because the steps aren't implement yet.
+
+    > Then('the user is on the {string} hero details page', function (string) {
+    >   // Write code here that turns the phrase above into concrete actions
+    >   return 'pending';
+    > });
+
+    The template is returning the keyword `pending` which is stopping the scenario execution but
+    it doesn't send an error.
+
 ## Templates
+
+    Browser things :
+        > browser.get(url) //Used to redirect the browser to the url given as a parameter
+        Usage : Used to go on the Tour of Heroes Initial page.
+            > Given('the user is on Tour of Heroes', function() {
+            >   browser.get(initialPage.getUrl());
+            >   return expect(initialPage.getRootElement().isDisplayed()).is.eventually.true;
+            > });
+        > browser.getCurrentUrl() //Returning the browser current url, useful to compare with a url
+        Usage : Used to compare the current url to heroes page url to know if the user is on
+        the heroes page, as expected
+            > Then('the user is on the heroes page', function() {
+            >   return expect(browser.getCurrentUrl()).is.eventually.equal(
+            >       heroesPage.getUrl()
+            >   );
+            > });
+    User action things :
+        > page.button.click() //Used to click on button which is on page
+        >
 
 ## Our best practices
