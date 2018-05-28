@@ -7,20 +7,27 @@
 ## Gherkin
 
     Feature: Initial state
-        Scenario: The user goes on the heroes page from the initial page
-           Given the user is on Tour of Heroes
-           When the user click on heroes button
-           Then the user is on the heroes page
+        As a user
+        I can see the Tour of Heroes Initial page
+        So that I can navigate on all of the app
+
+        Scenario: I go on the heroes page from the initial page
+           Given I am on Tour of Heroes
+           When I click on heroes button
+           Then I am on the heroes page
 
 The code above is written with Gherkin.
-This is basically a language which is use to write functionnal testing.
+This is basically a language which is used to write functionnal testing.
 As you can see it is really close to english speaking.
 
-Gherkin is working with keywords which are starting all the Gherkin phrases.
+Gherkin works with keywords which are started all the Gherkin phrases.
 
-## Feature
+## Feature / User story environment
 
     Feature: Initial state
+        As a user
+        I can see the Tour of Heroes Initial page
+        So that I can navigate on all of the app
 
 This is the Feature functionnal description.
 Be as precise as possible.
@@ -35,38 +42,42 @@ For one Feature, it is possible and common to have more than one Scenario.
 
 ## Steps
 
-    >       Given the user is on Tour of Heroes
-    >       When the user click on heroes button
-    >       Then the user is on the heroes page
+    Given the user is on Tour of Heroes
+    When the user click on heroes button
+    Then the user is on the heroes page
+    And the heroes are displayed
 
-All the phrases which are in a scenario and started with the keywords Given, When or Then are
+All the phrases which are in a scenario and starts with the keywords Given, When or Then are
 called Steps.
 
 * The keyword **Given** is always described a scenario context.
 * The keyword **When** is always described an user action.
-* The keyword **Then** is checked a result from an user action.
+* The keyword **Then** is always checked a result from an user action.
+* The keyword **And** is always reproduced the above keyword, in this case And = Then
 
-## Background
+## Background / Scenario outline / Examples
 
-    > Feature: Dashboard
-    >   Background: The user is on Tour of Heroes and the page is displaying the dashboard
-    >       Given the user is on Tour of Heroes
-    >       And the page displays the dashboard
+    Feature: Dashboard
+        As a user
+        I can see the top heroes grid and click on one of them
+        So that I can modify the heroes names and I can see the most popular of them
 
-The Background keyword is doing its steps before all the scenarios which are in the same feature.
-The And keyword is used to says that it is the same keyword than the above one.
+        Background: I am on Tour of Heroes and the page is displaying the dashboard
+            Given I am on Tour of Heroes
+            And I can see the dashboard
 
-## Scenario outline/Examples
+        Scenario Outline: I click on Narco in the top heroes grid
+            When I click on <heroName> button from top heroes grid
+            Then I am on the <heroName> hero details page
 
-    > Scenario Outline: The user click on Narco in the top heroes grid
-    >   When the user clicks on <heroName> button from top heroes grid
-    >   Then the user is on the <heroName> hero details page
-    > Examples: Hero name
-    >   | heroName  |
-    >   | 'Narco'   |
-    >   | 'Magneta' |
+        Examples: Hero name
+            | heroName  |
+            | 'Narco'   |
+            | 'Magneta' |
 
-A Scenario Outline is a Scenario which is doing its steps more than one time.
+The Background keyword does its steps before all the scenarios which are in the same feature.
+
+A Scenario Outline is a Scenario which does its steps more than one time.
 It always come with an Examples Table to give some values to the placeholder.
 A placeholder is basically a variable.
 
@@ -80,11 +91,4 @@ One Feature = One Feature file.
 
 Understandable english.
 
-Steps order :
-
-* A Given step can be followed by a When or another Given (write it And) or nothing.
-* A When step can be followed by a Then or another When (write it And).
-* A Then step can be followed by another Then (write it And) or nothing or a When if it is really necessary and if there is no other possibility to separate the Scenario in two scenarios.
-
-You can write steps with the third person, this is always good, and with the first person.
-If you are using the first person, it is referencing to the user describe in the user story environment which is in the Feature keyword. If there is no user describe in the user story environment, then always use the third person.
+The steps has to be written with the first person. The subject is the one described in the user story environment.
