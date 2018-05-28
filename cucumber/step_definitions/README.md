@@ -6,8 +6,7 @@
 
 ## Steps files
 
-    A Steps file is containing the implementation of the steps which are write in Gherkin in
-    the corresponding feature file.
+A Steps file is containing the implementation of the steps which are write in Gherkin in the corresponding feature file.
 
 ## Steps
 
@@ -59,7 +58,7 @@ The When steps describe an user action.
         );
     });
 
-    The Then steps are describing a result of an user action.
+The Then steps are describing a result of an user action.
 
 ## How to validate a step implementation
 
