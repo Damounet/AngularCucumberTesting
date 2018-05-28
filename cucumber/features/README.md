@@ -1,12 +1,11 @@
-# angularFunctionnalTesting
-
-Testing the Tour of Heroes Tutorial app using protractor and cucumber.
-[How to install and run the functionnal tests](../)|[How to write steps files](../step_definitions)|[How to write pages files](../pages)
+[How to install and run the functionnal tests](../)
+[How to write steps files](../step_definitions)
+[How to write pages files](../pages)
 
 # Gherkin
 
 ```
-    **Feature:** Initial state
+    Feature: Initial state
         Scenario: The user goes on the heroes page from the initial page
            Given the user is on Tour of Heroes
            When the user click on heroes button
