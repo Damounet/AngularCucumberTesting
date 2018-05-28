@@ -2,6 +2,12 @@
 
 # How to write Feature files
 
+This README is for all the team members, product owner, QA and developpers as well.
+
+It describes how to write a good feature file with our own best practices.
+
+This README will be uptade from time to time.
+
 ## Gherkin
 
 ```Gherkin
@@ -14,6 +20,7 @@
            Given I am on Tour of Heroes
            When I click on heroes button
            Then I am on the heroes page
+           And I see the heroes list
 ```
 
 The code above is written with Gherkin.
@@ -51,10 +58,10 @@ Each scenario contains some steps which start with a Gherkin keyword.
 ## Steps
 
 ```Gherkin
-    Given the user is on Tour of Heroes
-    When the user click on heroes button
-    Then the user is on the heroes page
-    And the heroes are displayed
+    Given I am on Tour of Heroes
+    When I click on heroes button
+    Then I am on the heroes page
+    And I see the heroes list
 ```
 
 All the phrases which are in a scenario and starts with the keywords Given, When or Then are called Steps.
