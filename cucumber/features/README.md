@@ -2,7 +2,9 @@
 * [How to write steps files](../step_definitions)
 * [How to write pages files](../pages)
 
-# Gherkin
+# How to write Feature files
+
+## Gherkin
 
     Feature: Initial state
         Scenario: The user goes on the heroes page from the initial page
@@ -51,44 +53,38 @@ called Steps.
     >       Given the user is on Tour of Heroes
     >       And the page displays the dashboard
 
-    The Background keyword is doing its steps before all the scenarios which are in the same feature.
-    The And keyword is used to says that it is the same keyword than the above one.
+The Background keyword is doing its steps before all the scenarios which are in the same feature.
+The And keyword is used to says that it is the same keyword than the above one.
 
-## Scenario outline
+## Scenario outline/Examples
 
     > Scenario Outline: The user click on Narco in the top heroes grid
     >   When the user clicks on <heroName> button from top heroes grid
     >   Then the user is on the <heroName> hero details page
-
-    A Scenario Outline is a Scenario which is doing its steps more than one time.
-    It always come with an Examples Table to give some values to the placeholder.
-    A placeholder is basically a variable.
-
-### Examples
-
     > Examples: Hero name
     >   | heroName  |
     >   | 'Narco'   |
     >   | 'Magneta' |
 
-    An examples table is used to give some values to the Scenario outline placeholders.
-    This one has some values for the heroName placeholder, these values are 'Narco' and 'Magneta'.
-    Then, the concerned Scenario outline will be played two times with the two differents values.
+A Scenario Outline is a Scenario which is doing its steps more than one time.
+It always come with an Examples Table to give some values to the placeholder.
+A placeholder is basically a variable.
+
+An examples table is used to give some values to the Scenario outline placeholders.
+This one has some values for the heroName placeholder, these values are 'Narco' and 'Magneta'.
+Then, the concerned Scenario outline will be played two times with the two differents values.
 
 # Our best practices
 
-    One Feature = One Feature file.
+One Feature = One Feature file.
 
-    Understandable english.
+Understandable english.
 
-    Steps order :
-        A Given step can be followed by a When or another Given (write it And) or nothing.
-        A When step can be followed by a Then or another When (write it And).
-        A Then step can be followed by another Then (write it And) or nothing or a When if it is
-        really necessary and if there is no other possibility to separate the Scenario in two
-        scenarios.
+Steps order :
 
-    You can write steps with the third person, this is always good, and with the first person.
-    If you are using the first person, it is referencing to the user describe in the user story
-    environment which is in the Feature keyword. If there is no user describe in the user story
-    environment, then always use the third person.
+* A Given step can be followed by a When or another Given (write it And) or nothing.
+* A When step can be followed by a Then or another When (write it And).
+* A Then step can be followed by another Then (write it And) or nothing or a When if it is really necessary and if there is no other possibility to separate the Scenario in two scenarios.
+
+You can write steps with the third person, this is always good, and with the first person.
+If you are using the first person, it is referencing to the user describe in the user story environment which is in the Feature keyword. If there is no user describe in the user story environment, then always use the third person.
