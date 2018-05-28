@@ -85,7 +85,7 @@ Testing the Tour of Heroes Tutorial app using protractor and cucumber.
     Example :
 
     > Given the user is on Tour of Heroes
-    This steps has been created give a context to the scenario.
+    This step has been created to give a context to the scenario.
     This context is the user location on the internet.
     So, the scenario needs that the user is on Tour of Heroes to be relevant.
 
