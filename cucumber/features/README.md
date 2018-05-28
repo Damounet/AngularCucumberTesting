@@ -13,12 +13,12 @@ Testing the Tour of Heroes Tutorial app using protractor and cucumber.
            Then the user is on the heroes page
 ```
 
-    The code above is write with Gherkin.
-    This is basically a language which is use to write functionnal testing.
-    As you can see it is really close to english speaking.
+The code above is write with Gherkin.
+This is basically a language which is use to write functionnal testing.
+As you can see it is really close to english speaking.
 
-    Gherkin is working with keywords which are starting all the Gherkin phrases.
-    Let's see these more precisely.
+**Gherkin** is working with keywords which are starting all the Gherkin phrases.
+Let's see these more precisely.
 
 ## Feature
 
