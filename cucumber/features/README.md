@@ -5,11 +5,13 @@ Testing the Tour of Heroes Tutorial app using protractor and cucumber.
 
 # Gherkin
 
-    > Feature: Initial state
-    >   Scenario: The user goes on the heroes page from the initial page
-    >       Given the user is on Tour of Heroes
-    >       When the user click on heroes button
-    >       Then the user is on the heroes page
+```
+    **Feature:** Initial state
+        Scenario: The user goes on the heroes page from the initial page
+           Given the user is on Tour of Heroes
+           When the user click on heroes button
+           Then the user is on the heroes page
+```
 
     The code above is write with Gherkin.
     This is basically a language which is use to write functionnal testing.
@@ -94,13 +96,16 @@ Testing the Tour of Heroes Tutorial app using protractor and cucumber.
 # Our best practices
 
     One Feature = One Feature file.
+
     Understandable english.
+
     Steps order :
         A Given step can be followed by a When or another Given (write it And) or nothing.
         A When step can be followed by a Then or another When (write it And).
         A Then step can be followed by another Then (write it And) or nothing or a When if it is
         really necessary and if there is no other possibility to separate the Scenario in two
         scenarios.
+
     You can write steps with the third person, this is always good, and with the first person.
     If you are using the first person, it is referencing to the user describe in the user story
     environment which is in the Feature keyword. If there is no user describe in the user story

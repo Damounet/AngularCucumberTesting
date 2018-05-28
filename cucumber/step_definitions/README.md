@@ -42,7 +42,7 @@ Testing the Tour of Heroes Tutorial app using protractor and cucumber.
     Most of the time, the Given steps implementation has to go on a specific page and check
     that the browser is on the page.
     However, a Given step can be a visibility element check.
-    IMPORTANT : NO USER ACTION IN A GIVEN STEP
+    IMPORTANT : NO USER ACTION IN A GIVEN STEP EXCEPT IF YOU NEED ONE TO CREATE THE RIGHT CONTEXT
 
 ### When
 
@@ -152,6 +152,7 @@ Testing the Tour of Heroes Tutorial app using protractor and cucumber.
             >   browser.get(initialPage.getUrl());
             >   return expect(initialPage.getRootElement().isDisplayed()).is.eventually.true;
             > });
+
         > browser.getCurrentUrl() //Returning the browser current url, useful to compare with a url
         Usage : Used to compare the current url to heroes page url to know if the user is on
         the heroes page, as expected
@@ -160,8 +161,42 @@ Testing the Tour of Heroes Tutorial app using protractor and cucumber.
             >       heroesPage.getUrl()
             >   );
             > });
+
+        > browser.getTitle() //Returning the current page's browser title
+        Usage : Used to compare the actual title of the browser with the expected title to see if
+        the user is on the good website.
+            > Given('the browser page title is {string}', function(pageTitle) {
+                > return expect(browser.getTitle()).is.eventually.equal(pageTitle);
+            > });
+
+
     User action things :
         > page.button.click() //Used to click on button which is on page
-        >
+        Usage : Used to click on the Heroes button to test it. If it works, then the user won't be
+        on the same page after its click.
+            > When('the user click on heroes button', function() {
+            >   initialPage.getHeroesButton().click();
+            >   return expect(browser.getCurrentUrl()).is.eventually.not.equal(
+            >       dashboardPage.getUrl()
+            >   );
+            > });
+
+        > page.input.sendKeys('une chaîne de caractères') //Used to write something in an input
+        Usage : Used to write something in a search bar and check if the search's results are
+        displayed.
+            > When('the user writes {string} in the search bar', function(searchHeroString) {
+            >   dashboardPage.getSearchInput().sendKeys(searchHeroString);
+            >   return expect(
+            >       dashboardPage.getSearchHeroResult().isDisplayed()
+            >   ).is.eventually.true;
+            > });
+
+    Expect chai things :
+        > expect()
+        > is
+        > eventually
+        > not
+        
+
 
 ## Our best practices
