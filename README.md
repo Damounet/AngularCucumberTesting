@@ -1,7 +1,4 @@
-# angularFunctionnalTesting
-
-Testing the Tour of Heroes Tutorial app using protractor and cucumber.
-[How to write features files](./features)|[How to write steps files](./step_definitions)|[How to write pages files](./pages)
+[How to write features files](./cucumber/features) | [How to write steps files](./cucumber/step_definitions) | [How to write pages files](./cucumber/pages)
 
 # Dependencies
 

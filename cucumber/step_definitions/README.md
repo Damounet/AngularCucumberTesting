@@ -1,12 +1,10 @@
-* [How to install and run the functionnal tests](../)
-* [How to write features files](../features)
-* [How to write pages files](../pages)
+[How to write features files](../features) | [How to write pages files](../pages)
 
 # How to write a steps file
 
 ## Steps files
 
-A Steps file is containing the implementation of the steps which are write in Gherkin in the corresponding feature file.
+A Steps file contains the implementation of the steps which are written in Gherkin in the feature file.
 
 ## Steps
 
@@ -30,40 +28,16 @@ A Steps file is containing the implementation of the steps which are write in Gh
 
 All the phrases which are in a scenario and starts with the keywords Given, When or Then are called Steps.
 
-### Given
+* The keyword **Given** describes a scenario context.
+* The keyword **When** describes an user action.
+* The keyword **Then** checks a result from an user action.
 
-    Given('the user is on Tour of Heroes', function() {
-        browser.get(initialPage.getUrl());
-        return expect(initialPage.getRootElement().isDisplayed()).is.eventually.true;
-    });
-
-The Given steps describe a context.
-
-### When
-
-    When('the user click on heroes button', function() {
-        initialPage.getHeroesButton().click();
-        return expect(browser.getCurrentUrl()).is.eventually.not.equal(
-            dashboardPage.getUrl()
-        );
-    });
-
-The When steps describe an user action.
-
-### Then
-
-    Then('the user is on the heroes page', function() {
-        return expect(browser.getCurrentUrl()).is.eventually.equal(
-            heroesPage.getUrl()
-        );
-    });
-
-The Then steps are describing a result of an user action.
+The steps have to be simple and reusable.
 
 ## How to validate a step implementation
 
-A good step, and so a validate step, is a step which respects the Given, When and Then rules. It also answer to the purpose of its creation.
-Moreover, each steps has to check its own behavior.
+A valid step, is a step which respects the Given, When and Then rules. It also answer to the purpose of its creation.
+Moreover, each step has to check its own behavior.
 
 Example :
 
@@ -80,11 +54,11 @@ Let's write the implementation with these informations.
         return expect(initialPage.getRootElement().isDisplayed()).is.eventually.true;
     });
 
-browser.get() is used to send the browser on the url given between the ()
-return expect() is checking that the browser is well displaying the most relevant element of the
+browser.get() sends the browser on the url given between the ().
+expect(element.isDisplayed()).thing.true checks that the browser is well displaying a specific element of the
 page to check if the good page is displayed.
 
-So, this step implementation is respecting the steps rules because, as a given step it only create a context, it also answer to the purpose of its creation because it bring the browser on the good page and check itself if the page is displayed, so it check its own behavior.
+So, this step implementation respects the steps rules because, as a given step it only describes a context, it also answer to the purpose of its creation because it brings the browser on the good page and check itself if the page is displayed, so it check its own behavior.
 
 IMPORTANT : A STEP HAS TO CHECK ITSELF
 
@@ -101,7 +75,7 @@ IMPORTANT : A STEP HAS TO CHECK ITSELF
     chai.use(chaiAsPromised);
     const expect = chai.expect;
 
-Basically, an import or a require signaling to the compiler that the file is needind some more things to works. To write a steps file, you need, at least, four things :
+An import or a require signals to the compiler that the file needs some more things to works. To write a steps fileat least these four things are needed :
 
 * Some tools from protractor
 * The pages objects which are used in the steps file
@@ -112,22 +86,24 @@ Just copy/paste these import/require above all of your step files, modify and ad
 
 ## Templates from cucumber
 
-When your feature file is ready, without your step file, try to lauch your functionnal test with :
+When the feature file is ready, without the step file, try to lauch the functionnal test with :
 
 > `protractor protractor-cucumber.conf.js`
 
-If your feature file is good, then the command console will give you all your steps template because the steps aren't implement yet.
+If the feature file is good, then the console gives all the steps template because the steps aren't implemented yet.
 
     Then('the user is on the {string} hero details page', function (string) {
        // Write code here that turns the phrase above into concrete actions
        return 'pending';
     });
 
-The template is returning the keyword `pending` which is stopping the scenario execution but it doesn't send an error.
+The template returns the keyword `pending` which stops the scenario execution but it doesn't send an error.
 
 ## Templates
 
-Browser things :
+###Browser things :
+
+####get()
 
 > browser.get(url) //Used to redirect the browser to the url given as a parameter
 
@@ -138,15 +114,19 @@ Usage : Used to go on the Tour of Heroes Initial page.
         return expect(initialPage.getRootElement().isDisplayed()).is.eventually.true;
     });
 
+####getCurrentUrl()
+
 > browser.getCurrentUrl() //Returning the browser current url, useful to compare with a url
 
-Usage : Used to compare the current url to heroes page url to know if the user is on the heroes page, as expected
+Usage : Used to compare the current url to heroes page url to know if the user is on the heroes page
 
     Then('the user is on the heroes page', function() {
         return expect(browser.getCurrentUrl()).is.eventually.equal(
             heroesPage.getUrl()
         );
     });
+
+####getTitle()
 
 > browser.getTitle() //Returning the current page's browser title
 
@@ -156,7 +136,9 @@ Usage : Used to compare the actual title of the browser with the expected title 
         return expect(browser.getTitle()).is.eventually.equal(pageTitle);
     });
 
-User action things :
+###User action things :
+
+####click()
 
 > page.button.click() //Used to click on button which is on page
 
@@ -169,6 +151,8 @@ Usage : Used to click on the Heroes button to test it. If it works, then the use
         );
     });
 
+####sendKeys('')
+
 > page.input.sendKeys('une chaîne de caractères') //Used to write something in an input
 
 Usage : Used to write something in a search bar and check if the search's results are displayed.
@@ -180,7 +164,7 @@ Usage : Used to write something in a search bar and check if the search's result
         ).is.eventually.true;
     });
 
-Expect chai things :
+###Expect chai things :
 
 * expect()
 * is
@@ -188,7 +172,5 @@ Expect chai things :
 * not
 * equal()
 * include()
-
-Elements comparison tools :
 
 ## Our best practices

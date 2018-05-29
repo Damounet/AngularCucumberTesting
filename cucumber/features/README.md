@@ -103,7 +103,7 @@ The **Scenario Outline** steps provide a template which is never directly run. A
 
 The way this works is via placeholders. Placeholders must be contained within < > in the Scenario Outline's steps. These placeholders act as variables.
 
-The simple quotes which surrounds the datas in the _Example Table_ are mandatory because we use Typescript to test.
+The simple quotes which surrounds the data in the _Example Table_ are mandatory because we use Typescript to test.
 
 # Our best practices
 
