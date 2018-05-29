@@ -4,7 +4,7 @@
 
 ## Steps files
 
-A Steps file contains the implementation of the steps which are written in Gherkin in the feature file.
+A Steps file contains the implementation of the steps. Steps files are written with Typescript.
 
 ## Steps
 
@@ -26,7 +26,7 @@ A Steps file contains the implementation of the steps which are written in Gherk
         );
     });
 
-All the phrases which are in a scenario and starts with the keywords Given, When or Then are called Steps.
+A Step is a Gherkin's phrase which starts with the keywords Given, When or Then.
 
 * The keyword **Given** describes a scenario context.
 * The keyword **When** describes an user action.
@@ -36,8 +36,8 @@ The steps have to be simple and reusable.
 
 ## How to validate a step implementation
 
-A valid step, is a step which respects the Given, When and Then rules. It also answer to the purpose of its creation.
-Moreover, each step has to check its own behavior.
+A valid step respects the Given, When and Then rules. It also answers to its creation's purpose.
+Moreover, each step has to checks its own behavior.
 
 Example :
 
@@ -75,10 +75,10 @@ IMPORTANT : A STEP HAS TO CHECK ITSELF
     chai.use(chaiAsPromised);
     const expect = chai.expect;
 
-An import or a require signals to the compiler that the file needs some more things to works. To write a steps fileat least these four things are needed :
+An import or a require signals to the compiler that the file needs some more things to works. To write a steps file at least these four things are needed :
 
 * Some tools from protractor
-* The pages objects which are used in the steps file
+* The pages which are used in the steps file
 * Some tools from cucumber
 * And chai/chaiAsPromised to use the expect() things
 

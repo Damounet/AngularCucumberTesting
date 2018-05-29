@@ -22,7 +22,7 @@ It describes how to write a good feature file with our own best practices.
 ```
 
 The code above is written with Gherkin.
-This is a language which is used to write functionnal testing.
+This language is used to write functionnal testing.
 Gherkin is close to english speaking.
 
 Gherkin works with keywords. These keywords start all the Gherkin's phrases.
@@ -42,8 +42,7 @@ It describes the user story environment as well.
 Be as precise as possible.
 One file for one feature.
 
-Feature contains scenarios.
-For one Feature, it is possible and common to have more than one scenario.
+Feature contains one or more scenarios.
 
 ## Scenario
 
@@ -52,9 +51,10 @@ For one Feature, it is possible and common to have more than one scenario.
 ```
 
 This is the Scenario functionnal description.
+
 If there is more than one scenario in the file, they are sequentially executed.
 
-Each scenario contains some steps which start with a Gherkin keyword.
+Each scenario contains some steps.
 
 ## Steps
 
@@ -65,14 +65,14 @@ Each scenario contains some steps which start with a Gherkin keyword.
     And I see the heroes list
 ```
 
-All the phrases which are in a scenario and starts with the keywords Given, When or Then are called Steps.
+A Step is a Gherkin's phrase which starts with the keywords Given, When or Then.
 
 * The keyword **Given** describes a scenario context.
 * The keyword **When** describes an user action.
 * The keyword **Then** checks a result from an user action.
 * The keyword **And** reproduces the above keyword, in this case And = Then
 
-The steps have to be simple and reusable.
+A step has to be simple and reusable.
 
 ## Background / Scenario outline / Examples
 
@@ -103,7 +103,7 @@ The **Scenario Outline** steps provide a template which is never directly run. A
 
 The way this works is via placeholders. Placeholders must be contained within < > in the Scenario Outline's steps. These placeholders act as variables.
 
-The simple quotes which surrounds the data in the _Example Table_ are mandatory because we use Typescript to test.
+Data are surrounded with simple quotes because of Typescript usage, they are mandatory.
 
 # Our best practices
 
