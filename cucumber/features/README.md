@@ -2,11 +2,9 @@
 
 # How to write Feature files
 
-This README is for all the team members, product owner, QA and developpers as well.
+This README is for all the team members, product owner, QA and developpers.
 
 It describes how to write a good feature file with our own best practices.
-
-This README will be uptade from time to time.
 
 ## Gherkin
 
@@ -24,8 +22,8 @@ This README will be uptade from time to time.
 ```
 
 The code above is written with Gherkin.
-This is basically a language which is used to write functionnal testing.
-Gherkin is really close to english speaking.
+This is a language which is used to write functionnal testing.
+Gherkin is close to english speaking.
 
 Gherkin works with keywords. These keywords start all the Gherkin's phrases.
 
@@ -39,8 +37,10 @@ Gherkin works with keywords. These keywords start all the Gherkin's phrases.
 ```
 
 This is the Feature functionnal description.
-Be as precise as possible.
 It describes the user story environment as well.
+
+Be as precise as possible.
+One file for one feature.
 
 Feature contains scenarios.
 For one Feature, it is possible and common to have more than one scenario.
@@ -52,6 +52,7 @@ For one Feature, it is possible and common to have more than one scenario.
 ```
 
 This is the Scenario functionnal description.
+If there is more than one scenario in the file, they are sequentially executed.
 
 Each scenario contains some steps which start with a Gherkin keyword.
 
@@ -70,6 +71,8 @@ All the phrases which are in a scenario and starts with the keywords Given, When
 * The keyword **When** describes an user action.
 * The keyword **Then** checks a result from an user action.
 * The keyword **And** reproduces the above keyword, in this case And = Then
+
+The steps have to be simple and reusable.
 
 ## Background / Scenario outline / Examples
 
@@ -96,20 +99,18 @@ All the phrases which are in a scenario and starts with the keywords Given, When
 The **Background** keyword describes the context of all the scenarios in the feature file.
 The background is unique and it runs automatically before each scenarios.
 
-A **Scenario Outline** describes a scenario which runs multiple times.
-It always come with an _Examples Table_ to give some values to the placeholder.
-A placeholder is basically a variable.
+The **Scenario Outline** steps provide a template which is never directly run. A Scenario Outline is run once for each row in the **Examples** section beneath it (not counting the first row).
 
-This one has some values for the heroName placeholder, these values are 'Narco' and 'Magneta'.
-Then, the Scenario outline will be played two times with the two differents values.
-The simple quotes which surrounds the datas in the _Example Table_ are mandatory since the datas are values of the variables which will be use during the functionnal test.
+The way this works is via placeholders. Placeholders must be contained within < > in the Scenario Outline's steps. These placeholders act as variables.
+
+The simple quotes which surrounds the datas in the _Example Table_ are mandatory because we use Typescript to test.
 
 # Our best practices
 
 One Feature = One Feature file.
 
-Understandable english.
+The tests have to be written with the best english possible. Everyone have to be able to understand the scenarios, even a non team member.
 
-The steps has to be written with the first person. The subject is the one described in the user story environment.
+The steps have to be written with the first person. The subject is the one described in the user story environment.
 
-Step has to be simple and reusable.
+Steps have to be simple and reusable.
