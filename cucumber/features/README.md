@@ -12,9 +12,8 @@ It describes how to write a good feature file with our own best practices.
     Feature : Get a coffee
 	As a user
 	I want a coffee
-	To be hot
 
-	Scenario : I get a cappuccino
+	Scenario : I select a cappuccino on the coffee machine and I get it
 	    Given I am in my office
 	    And I can see that the coffee machine is fully functional
 	    When I press the ‘cappuccino’ button
@@ -22,7 +21,7 @@ It describes how to write a good feature file with our own best practices.
 	    Then I can see that the ‘cappuccino’ is prepared
 	    And I can drink it
 
-	Scenario : I get a latte
+	Scenario : I select a latte on the coffee machine and I get it
 	    Given I am in my office
 	    And I can see that the coffee machine is fully functional
 	    When I press the ‘latte’ button
@@ -43,7 +42,6 @@ Gherkin works with keywords. These keywords start all the Gherkin's phrases.
     Feature : Get a coffee
         As a user
         I want a coffee
-        To be hot
 ```
 
 This is the Feature functionnal description.
@@ -57,7 +55,7 @@ Feature contains one or more scenarios.
 ## Scenario
 
 ```Gherkin
-    Scenario : I get a cappuccino
+    Scenario : I select a cappuccino on the coffee machine and I get it
 ```
 
 This is the Scenario functionnal description.
@@ -89,10 +87,9 @@ A step has to be simple and reusable.
 ## Background / Scenario outline / Examples
 
 ```Gherkin
-Feature : Get a coffee (Scenario outline/variable)
+Feature : I select a coffee type on the coffee machine and I get it
     As a user
     I want a coffee
-    To be hot
 
     Background :
         Given I am in my office

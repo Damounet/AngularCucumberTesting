@@ -101,9 +101,9 @@ The template returns the keyword `pending` which stops the scenario execution bu
 
 ## Templates
 
-###Browser things :
+### Browser things :
 
-####get()
+#### get()
 
 > browser.get(url) //Used to redirect the browser to the url given as a parameter
 
@@ -114,7 +114,7 @@ Usage : Used to go on the Tour of Heroes Initial page.
         return expect(initialPage.getRootElement().isDisplayed()).is.eventually.true;
     });
 
-####getCurrentUrl()
+#### getCurrentUrl()
 
 > browser.getCurrentUrl() //Returning the browser current url, useful to compare with a url
 
@@ -126,7 +126,7 @@ Usage : Used to compare the current url to heroes page url to know if the user i
         );
     });
 
-####getTitle()
+#### getTitle()
 
 > browser.getTitle() //Returning the current page's browser title
 
@@ -136,9 +136,9 @@ Usage : Used to compare the actual title of the browser with the expected title 
         return expect(browser.getTitle()).is.eventually.equal(pageTitle);
     });
 
-###User action things :
+### User action things :
 
-####click()
+#### click()
 
 > page.button.click() //Used to click on button which is on page
 
@@ -151,7 +151,7 @@ Usage : Used to click on the Heroes button to test it. If it works, then the use
         );
     });
 
-####sendKeys('')
+#### sendKeys('')
 
 > page.input.sendKeys('une chaîne de caractères') //Used to write something in an input
 
@@ -164,7 +164,7 @@ Usage : Used to write something in a search bar and check if the search's result
         ).is.eventually.true;
     });
 
-###Expect chai things :
+### Expect chai things :
 
 * expect()
 * is
