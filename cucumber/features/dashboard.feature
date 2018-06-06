@@ -1,11 +1,9 @@
-@dashboard
 Feature: Dashboard
 
   Background: The user is on Tour of Heroes and the page is displaying the dashboard
     Given the user is on Tour of Heroes
     And the page displays the dashboard
 
-  @topHeroes
   Scenario Outline: The user click on Narco in the top heroes grid
     When the user clicks on <heroName> button from top heroes grid
     Then the user is on the <heroName> hero details page
@@ -15,7 +13,6 @@ Feature: Dashboard
       | 'Narco'   |
       | 'Magneta' |
 
-  @searchHero
   Scenario Outline: The user look for Narco with the search
     Given the search bar is visible
     When the user writes <searchChars> in the search bar

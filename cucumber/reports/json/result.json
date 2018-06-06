@@ -1,0 +1,1481 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Dashboard",
+    "line": 1,
+    "id": "dashboard",
+    "tags": [],
+    "uri": "cucumber/features/dashboard.feature",
+    "elements": [
+      {
+        "id": "dashboard;the-user-click-on-narco-in-the-top-heroes-grid",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "The user click on Narco in the top heroes grid",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is on Tour of Heroes",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2065000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "the page displays the dashboard",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "the user clicks on 'Narco' button from top heroes grid",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 648000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "the user is on the 'Narco' hero details page",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "dashboard;the-user-click-on-narco-in-the-top-heroes-grid",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "The user click on Narco in the top heroes grid",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is on Tour of Heroes",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1728000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "the page displays the dashboard",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "the user clicks on 'Magneta' button from top heroes grid",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 629000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "the user is on the 'Magneta' hero details page",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "dashboard;the-user-look-for-narco-with-the-search",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "The user look for Narco with the search",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is on Tour of Heroes",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1161000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "the page displays the dashboard",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "the search bar is visible",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "the user writes 'Na' in the search bar",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 988000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "'Narco' button is visible in the search result",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "dashboard;the-user-look-for-narco-with-the-search",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "The user look for Narco with the search",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is on Tour of Heroes",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 892000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "the page displays the dashboard",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "the search bar is visible",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "the user writes 'Gne' in the search bar",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 953000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "'Magneta' button is visible in the search result",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "dashboard;the-user-goes-to-the-narco-details-page-from-search-results",
+        "keyword": "Scenario",
+        "line": 33,
+        "name": "The user goes to the Narco details page from search results",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is on Tour of Heroes",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 879000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "the page displays the dashboard",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "'Narco' button is displayed in the search result",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 910000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "the user click on the 'Narco' button from the search result",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 604000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "the user is on the 'Narco' hero details page",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "dashboard;the-user-goes-to-the-narco-details-page-from-search-results",
+        "keyword": "Scenario",
+        "line": 34,
+        "name": "The user goes to the Narco details page from search results",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is on Tour of Heroes",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 873000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "the page displays the dashboard",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "'Magneta' button is displayed in the search result",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 916000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "the user click on the 'Magneta' button from the search result",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 595000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "the user is on the 'Magneta' hero details page",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Herodetails page",
+    "line": 1,
+    "id": "herodetails-page",
+    "tags": [],
+    "uri": "cucumber/features/heroDetails.feature",
+    "elements": [
+      {
+        "id": "herodetails-page;the-user-modifies-the-hero-name-and-come-back-to-dashboard-page-using-the-save-button",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "The user modifies the hero name and come back to dashboard page using the save button",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is on the 'Narco' details page",
+            "match": {
+              "location": "cucumber/step_definitions/heroDetails.step.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1465000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "the user types 'Ragnaros the firelord' in the name bar",
+            "match": {
+              "location": "cucumber/step_definitions/heroDetails.step.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 211000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the user click on the save button",
+            "match": {
+              "location": "cucumber/step_definitions/heroDetails.step.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 603000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the user come back to the dashboard page",
+            "match": {
+              "location": "cucumber/step_definitions/heroDetails.step.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 530000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "'Ragnaros the firelord' is visible in the top heroes grid",
+            "match": {
+              "location": "cucumber/step_definitions/heroDetails.step.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "herodetails-page;the-user-come-back-to-dashboard-page-using-the-back-button",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "The user come back to dashboard page using the back button",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is on the 'Narco' details page",
+            "match": {
+              "location": "cucumber/step_definitions/heroDetails.step.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1486000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "the user click on the back button",
+            "match": {
+              "location": "cucumber/step_definitions/heroDetails.step.ts:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 598000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the user come back to the dashboard page",
+            "match": {
+              "location": "cucumber/step_definitions/heroDetails.step.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Heroes",
+    "line": 1,
+    "id": "heroes",
+    "tags": [],
+    "uri": "cucumber/features/heroes.feature",
+    "elements": [
+      {
+        "id": "heroes;the-user-add-varian-wrynn-as-a-hero",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "The user add Varian Wrynn as a hero",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is on the toh heroes page",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1455000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "the user writes 'Varian Wrynn' in the add bar",
+            "match": {
+              "location": "cucumber/step_definitions/heroes.step.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 114000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the user click on the add button",
+            "match": {
+              "location": "cucumber/step_definitions/heroes.step.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 589000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "'Varian Wrynn' is displayed in the heroes list",
+            "match": {
+              "location": "cucumber/step_definitions/heroes.step.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "heroes;the-user-delete-narco-from-the-hero-list",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "The user delete Narco from the hero list",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is on the toh heroes page",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1458000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "the user click on the 'Narco' delete button",
+            "match": {
+              "location": "cucumber/step_definitions/heroes.step.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 594000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "'Narco' is not present anymore in the heroes list",
+            "match": {
+              "location": "cucumber/step_definitions/heroes.step.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "heroes;the-user-goes-on-narco-details-page-from-heroes-page",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "The user goes on Narco details page from heroes page",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is on the toh heroes page",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1481000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "the user click on the 'Narco' button",
+            "match": {
+              "location": "cucumber/step_definitions/heroes.step.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 595000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "the user is on the 'Narco' hero details page",
+            "match": {
+              "location": "cucumber/step_definitions/dashboard.step.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Initial state",
+    "line": 1,
+    "id": "initial-state",
+    "tags": [],
+    "uri": "cucumber/features/initialState.feature",
+    "elements": [
+      {
+        "id": "initial-state;the-user-is-on-the-tour-of-heroes'-initial-page",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "The user is on the Tour of Heroes' initial page",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is on Tour of Heroes",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 888000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "the browser page title is 'Tour of Heroes'",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the page has the title 'Tour of Heroes'",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the page has the Dashboard button",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the page has the Heroes button",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the page displays the dashboard",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "initial-state;the-user-goes-on-the-heroes-page-from-the-initial-page",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "The user goes on the heroes page from the initial page",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "the user is on Tour of Heroes",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 860000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "the user click on heroes button",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 586000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "the user is on the heroes page",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "initial-state;the-user-goes-on-the-dashboard-page-from-the-heroes-page",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "The user goes on the Dashboard page from the heroes page",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "the user is on the toh heroes page",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1419000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "the user click on dashboard button",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 591000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "the user is on the dashboard page",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Messages",
+    "line": 1,
+    "id": "messages",
+    "tags": [],
+    "uri": "cucumber/features/messages.feature",
+    "elements": [
+      {
+        "id": "messages;clear-messages-from-dashboard-page",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Clear messages from dashboard page",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is on Tour of Heroes",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 881000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "the message page is visible",
+            "match": {
+              "location": "cucumber/step_definitions/messages.step.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "the user click on the clear button",
+            "match": {
+              "location": "cucumber/step_definitions/messages.step.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 71000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the messages page is not visible anymore",
+            "match": {
+              "location": "cucumber/step_definitions/messages.step.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "messages;clear-messages-from-heroes-page",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Clear messages from heroes page",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "the user is on the toh heroes page",
+            "match": {
+              "location": "cucumber/step_definitions/initialState.step.ts:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1421000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "the message page is visible",
+            "match": {
+              "location": "cucumber/step_definitions/messages.step.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "the user click on the clear button",
+            "match": {
+              "location": "cucumber/step_definitions/messages.step.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 77000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "the messages page is not visible anymore",
+            "match": {
+              "location": "cucumber/step_definitions/messages.step.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "messages;clear-messages-from-hero-details-page",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Clear messages from hero details page",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "the user is on the 'Narco' details page",
+            "match": {
+              "location": "cucumber/step_definitions/heroDetails.step.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1569000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "the message page is visible",
+            "match": {
+              "location": "cucumber/step_definitions/messages.step.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "the user click on the clear button",
+            "match": {
+              "location": "cucumber/step_definitions/messages.step.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 180000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "the messages page is not visible anymore",
+            "match": {
+              "location": "cucumber/step_definitions/messages.step.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "cucumber/step_definitions/common.step.ts:5"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

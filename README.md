@@ -1,5 +1,19 @@
 [How to write features files](./cucumber/features) | [How to write steps files](./cucumber/step_definitions) | [How to write pages files](./cucumber/pages)
 
+# Write functionnal testing with Cucumber
+
+## Objectives
+
+* Involve the product owner
+* Allow everyone to understand the tests scenarios
+* Use the scenarios as a spec
+
+## Roles
+
+* The Product Owner(PO) has to write the scenarios.
+* The QA has to code the steps.
+* The Developpers have to create the pages to give a toolbox to the QA.
+
 # Dependencies
 
 [Cucumber JS](https://github.com/cucumber/cucumber-js)

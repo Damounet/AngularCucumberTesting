@@ -9,16 +9,26 @@ It describes how to write a good feature file with our own best practices.
 ## Gherkin
 
 ```Gherkin
-    Feature: Initial state
-        As a user
-        I can see the Tour of Heroes Initial page
-        So that I can navigate on all of the app
+    Feature : Get a coffee
+	As a user
+	I want a coffee
+	To be hot
 
-        Scenario: I go on the heroes page from the initial page
-           Given I am on Tour of Heroes
-           When I click on heroes button
-           Then I am on the heroes page
-           And I see the heroes list
+	Scenario : I get a cappuccino
+	    Given I am in my office
+	    And I can see that the coffee machine is fully functional
+	    When I press the ‘cappuccino’ button
+	    And I put ‘0.50’€ in the machine
+	    Then I can see that the ‘cappuccino’ is prepared
+	    And I can drink it
+
+	Scenario : I get a latte
+	    Given I am in my office
+	    And I can see that the coffee machine is fully functional
+	    When I press the ‘latte’ button
+	    And I put ‘0.40’€ in the machine
+	    Then I can see that the ‘latte’ is prepared
+	    And I can drink it
 ```
 
 The code above is written with Gherkin.
@@ -30,10 +40,10 @@ Gherkin works with keywords. These keywords start all the Gherkin's phrases.
 ## Feature / User story environment
 
 ```Gherkin
-    Feature: Initial state
+    Feature : Get a coffee
         As a user
-        I can see the Tour of Heroes Initial page
-        So that I can navigate on all of the app
+        I want a coffee
+        To be hot
 ```
 
 This is the Feature functionnal description.
@@ -47,7 +57,7 @@ Feature contains one or more scenarios.
 ## Scenario
 
 ```Gherkin
-    Scenario: The user goes on the heroes page from the initial page
+    Scenario : I get a cappuccino
 ```
 
 This is the Scenario functionnal description.
@@ -59,10 +69,12 @@ Each scenario contains some steps.
 ## Steps
 
 ```Gherkin
-    Given I am on Tour of Heroes
-    When I click on heroes button
-    Then I am on the heroes page
-    And I see the heroes list
+    Given I am in my office
+    And I can see that the coffee machine is fully functional
+    When I press the ‘cappuccino’ button
+    And I put ‘0.50’€ in the machine
+    Then I can see that the ‘cappuccino’ is prepared
+    And I can drink it
 ```
 
 A Step is a Gherkin's phrase which starts with the keywords Given, When or Then.
@@ -70,30 +82,32 @@ A Step is a Gherkin's phrase which starts with the keywords Given, When or Then.
 * The keyword **Given** describes a scenario context.
 * The keyword **When** describes an user action.
 * The keyword **Then** checks a result from an user action.
-* The keyword **And** reproduces the above keyword, in this case And = Then
+* The keyword **And** reproduces the previous keyword.
 
 A step has to be simple and reusable.
 
 ## Background / Scenario outline / Examples
 
 ```Gherkin
-    Feature: Dashboard
-        As a user
-        I can see the top heroes grid and click on one of them
-        So that I can modify the heroes names and I can see the most popular of them
+Feature : Get a coffee (Scenario outline/variable)
+    As a user
+    I want a coffee
+    To be hot
 
-        Background: I am on Tour of Heroes and the page is displaying the dashboard
-            Given I am on Tour of Heroes
-            And I can see the dashboard
+    Background :
+        Given I am in my office
+        And I can see that the coffee machine is fully functional
 
-        Scenario Outline: I click on Narco in the top heroes grid
-            When I click on <heroName> button from top heroes grid
-            Then I am on the <heroName> hero details page
+    Scenario Outline : I get a coffee
+        When I press the <coffeeType> button
+        And I put <coffeeValue> in the machine
+        Then I can see that the <coffeeType> is prepared
+        And I can drink it
 
-            Examples: Hero name
-                | heroName  |
-                | 'Narco'   |
-                | 'Magneta' |
+    Examples :
+        |  coffeeType  | coffeeValues |
+        | 'cappuccino' |     '0.50'   |
+        |   'latte'    |     '0.40'   |
 ```
 
 The **Background** keyword describes the context of all the scenarios in the feature file.
