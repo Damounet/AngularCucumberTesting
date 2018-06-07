@@ -167,10 +167,44 @@ Usage : Used to write something in a search bar and check if the search's result
 ### Expect chai things :
 
 * expect()
+  * This build a promise. This is your first comparison element.
+
+```Typescript
+return expect(
+    dashboardPage.getSearchHeroResult().isDisplayed()
+)
+```
+
 * is
+  * This is a linker. It is not mandatory, the purpose is about coding as you logically think.
 * eventually
+  * This is mandatory. It transform a promise into a promise result asynchronously.
 * not
-* equal()
+  * This is an inverser. For example, it transform 'equal()' to 'unequal()'(unequal()function doesn't exist)
+
+```Typescript
+return expect(browser.getCurrentUrl()).is.eventually.not.equal(dashboardPage.getUrl());
+```
+
+* equal(parameter)
+  * It tests the equality between the expect() promise result and the equal() parameter.
+
+```Typescript
+return expect(browser.getCurrentUrl()).is.eventually.equal(dashboardPage.getUrl());
+```
+
 * include()
+  * It tests the inclusion between the expect() promise result and the include() parameter.
+
+```Typescript
+return expect(browser.getCurrentUrl()).is.eventually.include(initialPage.getUrl());
+```
+
+* true
+  * It tests if the expect() promise result is true.
+
+```Typescript
+return expect(initialPage.getRootElement().isDisplayed()).is.eventually.true;
+```
 
 ## Our best practices
