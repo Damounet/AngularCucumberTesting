@@ -8,6 +8,13 @@ It describes how to write a good feature file with our own best practices.
 
 ## Gherkin
 
+This language is used to write functionnal testing.
+Gherkin is close to english speaking.
+
+Gherkin works with keywords. These keywords start all the Gherkin's phrases.
+
+### Full example
+
 ```Gherkin
     Feature : Get a coffee
 	As a user
@@ -29,12 +36,6 @@ It describes how to write a good feature file with our own best practices.
 	    Then I can see that the ‘latte’ is prepared
 	    And I can drink it
 ```
-
-The code above is written with Gherkin.
-This language is used to write functionnal testing.
-Gherkin is close to english speaking.
-
-Gherkin works with keywords. These keywords start all the Gherkin's phrases.
 
 ## Feature / User story environment
 
@@ -86,6 +87,17 @@ A step has to be simple and reusable.
 
 ## Background / Scenario outline / Examples
 
+The **Background** keyword describes the context of all the scenarios in the feature file.
+The background is unique and it runs automatically before each scenarios.
+
+The **Scenario Outline** steps provide a template which is never directly run. A Scenario Outline is run once for each row in the **Examples** section beneath it (not counting the first row).
+
+The way this works is via placeholders. Placeholders must be contained within < > in the Scenario Outline's steps. These placeholders act as variables.
+
+Data are surrounded with simple quotes because of Typescript usage, they are mandatory.
+
+### Full example
+
 ```Gherkin
 Feature : I select a coffee type on the coffee machine and I get it
     As a user
@@ -106,15 +118,6 @@ Feature : I select a coffee type on the coffee machine and I get it
         | 'cappuccino' |     '0.50'   |
         |   'latte'    |     '0.40'   |
 ```
-
-The **Background** keyword describes the context of all the scenarios in the feature file.
-The background is unique and it runs automatically before each scenarios.
-
-The **Scenario Outline** steps provide a template which is never directly run. A Scenario Outline is run once for each row in the **Examples** section beneath it (not counting the first row).
-
-The way this works is via placeholders. Placeholders must be contained within < > in the Scenario Outline's steps. These placeholders act as variables.
-
-Data are surrounded with simple quotes because of Typescript usage, they are mandatory.
 
 # Our best practices
 
