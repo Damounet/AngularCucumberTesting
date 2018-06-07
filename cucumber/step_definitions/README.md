@@ -58,7 +58,7 @@ browser.get() sends the browser on the url given between the ().
 expect(element.isDisplayed()).thing.true checks that the browser is well displaying a specific element of the
 page to check if the good page is displayed.
 
-So, this step implementation respects the steps rules because, as a given step it only describes a context, it also answer to the purpose of its creation because it brings the browser on the good page and check itself if the page is displayed, so it check its own behavior.
+So, this step implementation respects the steps rules because, as a given step it only describes a context, it also answers to the purpose of its creation because it brings the browser on the good page and check itself if the page is displayed, so it checks its own behavior.
 
 IMPORTANT : A STEP HAS TO CHECK ITSELF
 
@@ -116,7 +116,7 @@ Usage : Used to go on the Tour of Heroes Initial page.
 
 #### getCurrentUrl()
 
-> browser.getCurrentUrl() //Returning the browser current url, useful to compare with a url
+> browser.getCurrentUrl() //Returning the browser current url, useful to compare with another url
 
 Usage : Used to compare the current url to heroes page url to know if the user is on the heroes page
 
