@@ -29,9 +29,9 @@ Given I am on Tour of Heroes
 In the steps file :
 
 ```Typescript
-    Given('I am on Tour of Heroes', function() {
-        //Do code
-    });
+Given('I am on Tour of Heroes', function() {
+    //Do code
+});
 ```
 
 ## Import/Require
@@ -105,7 +105,7 @@ return expect(browser.getCurrentUrl()).is.eventually.equal('google.com');
 Returning the current page's browser title.
 
 ```Typescript
-    return expect(browser.getTitle()).is.eventually.equal('Google');
+return expect(browser.getTitle()).is.eventually.equal('Google');
 ```
 
 ### User action things :
@@ -123,7 +123,7 @@ googlePage.getSearchButton().click();
 Used to write something in an input.
 
 ```Typescript
-    googlePage.getSearchInput().sendKeys('How to write a steps file');
+googlePage.getSearchInput().sendKeys('How to write a steps file');
 ```
 
 ### Expect chai things :
@@ -138,11 +138,11 @@ return expect(
 ```
 
 * is
-  * This is a linker. It is not mandatory, the purpose is about coding as you logically think.
+  * This is a linker. It is not mandatory. The code is prettier with it than without it.
 * eventually
-  * This is mandatory. It transform a promise into a promise result asynchronously.
+  * This is mandatory. It transform a promise into a promise result.
 * not
-  * This is an inverser. For example, it transform 'equal()' to 'unequal()'(unequal()function doesn't exist)
+  * This is an inverser. For example, not.equal() tests the unequality instead of equality.
 
 ```Typescript
 return expect(browser.getCurrentUrl()).is.eventually.not.equal(dashboardPage.getUrl());
@@ -169,7 +169,7 @@ return expect(browser.getCurrentUrl()).is.eventually.include(initialPage.getUrl(
 return expect(initialPage.getRootElement().isDisplayed()).is.eventually.true;
 ```
 
-### Useful templates
+### Templates
 
 ```Gherkin
 Given I am on a specific website

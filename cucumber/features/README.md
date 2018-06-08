@@ -26,7 +26,7 @@ Gherkin works with keywords. These keywords start all the Gherkin's phrases.
 	    When I press the ‘cappuccino’ button
 	    And I put ‘0.50’€ in the machine
 	    Then I can see that the ‘cappuccino’ is prepared
-	    And I can drink it
+	    And I can drink my 'cappuccino'
 
 	Scenario : I select a latte on the coffee machine and I get it
 	    Given I am in my office
@@ -34,7 +34,7 @@ Gherkin works with keywords. These keywords start all the Gherkin's phrases.
 	    When I press the ‘latte’ button
 	    And I put ‘0.40’€ in the machine
 	    Then I can see that the ‘latte’ is prepared
-	    And I can drink it
+	    And I can drink my 'latte'
 ```
 
 ## Feature / User story environment
@@ -73,7 +73,7 @@ Each scenario contains some steps.
     When I press the ‘cappuccino’ button
     And I put ‘0.50’€ in the machine
     Then I can see that the ‘cappuccino’ is prepared
-    And I can drink it
+    And I can drink my 'cappuccino'
 ```
 
 A Step is a Gherkin's phrase which starts with the keywords Given, When or Then.
@@ -111,7 +111,7 @@ Feature : I select a coffee type on the coffee machine and I get it
         When I press the <coffeeType> button
         And I put <coffeeValue> in the machine
         Then I can see that the <coffeeType> is prepared
-        And I can drink it
+        And I can drink my <coffeeType>
 
     Examples :
         |  coffeeType  | coffeeValues |
@@ -128,3 +128,6 @@ The tests have to be written with the best english possible. Everyone have to be
 The steps have to be written with the first person. The subject is the one described in the user story environment.
 
 Steps have to be simple and reusable.
+
+A simple step can check itself with only one assertion.
+A reusable step doesn't depend on its context.
