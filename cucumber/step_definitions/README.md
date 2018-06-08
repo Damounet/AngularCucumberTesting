@@ -2,81 +2,48 @@
 
 # How to write a steps file
 
-> //Intro à rédiger
+The steps files are feature files implementation. They are written by the QA.
+
+This README is written to learn to the QA how to write a step files with our best practices.
 
 ## Steps files
 
-A Steps file contains the implementation of the steps. Steps files are written with Typescript.
+A Steps file contains the implementation of the steps.
+
+A Steps file is name 'featureFileName.step.ts'. Its place is in /cucumber/step_definitions.
+
+Steps files are written with Typescript.
+
+[To learn about Typescript.](https://www.typescriptlang.org/)
 
 ## Steps
 
-> //N'y mettre qu'un squelette et expliquer le rapport entre les features et les steps files
+A Step in a steps file is an implementation of the same step in the feature file.
 
-A Step is a Gherkin's phrase which starts with the keywords Given, When or Then.
-
-* The keyword **Given** describes a scenario context.
-* The keyword **When** describes an user action.
-* The keyword **Then** checks a result from an user action.
-
-The steps have to be simple and reusable.
-
-```Typescript
-    Given('the user is on Tour of Heroes', function() {
-        browser.get(initialPage.getUrl());
-        return expect(initialPage.getRootElement().isDisplayed()).is.eventually.true;
-    });
-
-    When('the user click on heroes button', function() {
-        initialPage.getHeroesButton().click();
-        return expect(browser.getCurrentUrl()).is.eventually.not.equal(
-            dashboardPage.getUrl()
-        );
-    });
-
-    Then('the user is on the heroes page', function() {
-        return expect(browser.getCurrentUrl()).is.eventually.equal(
-            heroesPage.getUrl()
-        );
-    });
-```
-
-## How to validate a step implementation
-
-A valid step respects the Given, When and Then rules. It also answers to its creation's purpose.
-Moreover, each step has to checks its own behavior.
-
-Example :
+In the feature file :
 
 ```Gherkin
-Given the user is on Tour of Heroes
+Given I am on Tour of Heroes
 ```
 
-This step has been created to give a context to the scenario.
-This context is the user location on the internet.
-So, the scenario needs that the user is on Tour of Heroes to be relevant.
-
-Let's write the implementation with these informations.
+In the steps file :
 
 ```Typescript
-    Given('the user is on Tour of Heroes', function() {
-        browser.get(initialPage.getUrl());
-        return expect(initialPage.getRootElement().isDisplayed()).is.eventually.true;
+    Given('I am on Tour of Heroes', function() {
+        //Do code
     });
 ```
-
-browser.get() sends the browser on the url given between the ().
-expect(element.isDisplayed()).thing.true checks that the browser is well displaying a specific element of the
-page to check if the good page is displayed.
-
-So, this step implementation respects the steps rules because, as a given step it only describes a context, it also answers to the purpose of its creation because it brings the browser on the good page and check itself if the page is displayed, so it checks its own behavior.
-
-IMPORTANT : A STEP HAS TO CHECK ITSELF
 
 ## Import/Require
 
 An import or a require signals to the compiler that the file needs some more things to works. To write a steps file at least these four things are needed :
 
-* The pages which are used in the steps file
+* The pages used in the steps file
+
+```Typescript
+import { InitialPage } from '../pages/initialPage.po';
+```
+
 * Some libraries
 
 Just copy/paste these import/require above all of your step files, modify and add the pages imports.
@@ -96,14 +63,16 @@ const expect = chai.expect;
 
 ## Templates from cucumber
 
-When the feature file is ready, without the step file, try to lauch the functionnal test with :
+Cucumber can automatically generate some templates for the not implemented steps.
+
+When the feature file is ready try to launch the functionnal test with :
 
 > `protractor protractor-cucumber.conf.js`
 
 The console gives all the steps template because the steps aren't implemented yet.
 
 ```Typescript
-Then('the user is on the {string} hero details page', function (string) {
+Then('I am on the {string} hero details page', function (string) {
     // Write code here that turns the phrase above into concrete actions
     return 'pending';
 });
@@ -117,83 +86,44 @@ The template returns the keyword `pending` which stops the scenario execution bu
 
 #### get()
 
-```Typescript
-browser.get(url) //Used to redirect the browser to the url given as a parameter
-```
-
-Usage : Used to go on the Tour of Heroes Initial page.
+Used to redirect the browser on another webpage.
 
 ```Typescript
-Given('the user is on Tour of Heroes', function() {
-    browser.get(initialPage.getUrl());
-    return expect(initialPage.getRootElement().isDisplayed()).is.eventually.true;
-});
+browser.get('google.com');
 ```
 
 #### getCurrentUrl()
 
-```Typescript
-browser.getCurrentUrl() //Returning the browser current url, useful to compare with another url
-```
-
-Usage : Used to compare the current url to heroes page url to know if the user is on the heroes page
+Returning the browser current url, useful to compare with another url.
 
 ```Typescript
-Then('the user is on the heroes page', function() {
-    return expect(browser.getCurrentUrl()).is.eventually.equal(
-        heroesPage.getUrl()
-    );
-});
+return expect(browser.getCurrentUrl()).is.eventually.equal('google.com');
 ```
 
 #### getTitle()
 
-```Typescript
-browser.getTitle() //Returning the current page's browser title
-```
-
-Usage : Used to compare the actual title of the browser with the expected title to see if the user is on the good website.
+Returning the current page's browser title.
 
 ```Typescript
-Given('the browser page title is {string}', function(pageTitle) {
-    return expect(browser.getTitle()).is.eventually.equal(pageTitle);
-});
+    return expect(browser.getTitle()).is.eventually.equal('Google');
 ```
 
 ### User action things :
 
 #### click()
 
-```Typescript
-page.button.click() //Used to click on button which is on page
-```
-
-Usage : Used to click on the Heroes button to test it. If it works, then the user won't be on the same page after its click.
+Used to click on button on the page.
 
 ```Typescript
-When('the user click on heroes button', function() {
-    initialPage.getHeroesButton().click();
-    return expect(browser.getCurrentUrl()).is.eventually.not.equal(
-        dashboardPage.getUrl()
-    );
-});
+googlePage.getSearchButton().click();
 ```
 
 #### sendKeys('')
 
-```Typescript
-page.input.sendKeys('une chaîne de caractères') //Used to write something in an input
-```
-
-Usage : Used to write something in a search bar and check if the search's results are displayed.
+Used to write something in an input.
 
 ```Typescript
-When('the user writes {string} in the search bar', function(searchHeroString) {
-    dashboardPage.getSearchInput().sendKeys(searchHeroString);
-    return expect(
-        dashboardPage.getSearchHeroResult().isDisplayed()
-    ).is.eventually.true;
-});
+    googlePage.getSearchInput().sendKeys('How to write a steps file');
 ```
 
 ### Expect chai things :
@@ -239,6 +169,40 @@ return expect(browser.getCurrentUrl()).is.eventually.include(initialPage.getUrl(
 return expect(initialPage.getRootElement().isDisplayed()).is.eventually.true;
 ```
 
+### Useful templates
+
+```Gherkin
+Given I am on a specific website
+```
+
+```Typescript
+Given('I am on a specific website',function(){
+    browser.get(websiteUrl);
+    return expect(browser.getCurrentUrl()).is.eventually.equal(websiteUrl);
+});
+```
+
+```Gherkin
+When I want to click on this button
+```
+
+```Typescript
+When('I want to click on this button',function(){
+    page.getThisButton.click();
+    return expect(browser.getCurrentUrl()).is.eventually.not.equal(previousPageUrl);
+})
+```
+
+```Gherkin
+Then I am on another page
+```
+
+```Typescript
+Then('I am on another page',function(){
+    return expect(browser.getCurrentUrl()).is.eventually.equal(anotherPageUrl);
+})
+```
+
 ## Our best practices
 
-> //A faire
+A step has to check itself.
