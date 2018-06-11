@@ -19,9 +19,12 @@ Steps files are written with Gherkin.
 ## Gherkin
 
 This language is used to write functionnal testing.
-Gherkin is close to english speaking.
+
+Gherkin lets you express the behavior of your app using natural language that can be understood by business experts and non-technical QA staff.
 
 Gherkin works with keywords. These keywords start all the Gherkin's phrases.
+
+[Gherkin reference](https://docs.cucumber.io/gherkin/reference/)
 
 ### Full example
 
@@ -49,12 +52,6 @@ Gherkin works with keywords. These keywords start all the Gherkin's phrases.
 
 ## Feature / User story environment
 
-```Gherkin
-    Feature : Get a coffee
-        As a user
-        I want a coffee
-```
-
 This is the Feature functionnal description.
 It describes the user story environment as well.
 
@@ -63,11 +60,13 @@ One file for one feature.
 
 Feature contains one or more scenarios.
 
-## Scenario
-
 ```Gherkin
-    Scenario : I select a cappuccino on the coffee machine and I get it
+    Feature : Get a coffee
+        As a user
+        I want a coffee
 ```
+
+## Scenario
 
 This is the Scenario functionnal description.
 
@@ -75,16 +74,11 @@ If there is more than one scenario in the file, they are sequentially executed.
 
 Each scenario contains some steps.
 
-## Steps
-
 ```Gherkin
-    Given I am in my office
-    And I can see that the coffee machine is fully functional
-    When I press the ‘cappuccino’ button
-    And I put ‘0.50’€ in the machine
-    Then I can see that the ‘cappuccino’ is prepared
-    And I can drink my 'cappuccino'
+    Scenario : I select a cappuccino on the coffee machine and I get it
 ```
+
+## Steps
 
 A Step is a Gherkin's phrase which starts with the keywords Given, When or Then.
 
@@ -94,6 +88,15 @@ A Step is a Gherkin's phrase which starts with the keywords Given, When or Then.
 * The keyword **And** reproduces the previous keyword.
 
 A step has to be simple and reusable.
+
+```Gherkin
+    Given I am in my office
+    And I can see that the coffee machine is fully functional
+    When I press the ‘cappuccino’ button
+    And I put ‘0.50’€ in the machine
+    Then I can see that the ‘cappuccino’ is prepared
+    And I can drink my 'cappuccino'
+```
 
 ## Background / Scenario outline / Examples
 
@@ -131,13 +134,10 @@ Feature : I select a coffee type on the coffee machine and I get it
 
 # Our best practices
 
-One Feature = One Feature file.
+* One functionnal feature = One Feature file.
 
-The tests have to be written with the best english possible. Everyone have to be able to understand the scenarios, even a non team member.
+* Everyone have to be able to understand the scenarios, even a non team member.
 
-The steps have to be written with the first person. The subject is the one described in the user story environment.
+* Steps have to be written with the first person. The subject is the one described in the user story environment.
 
-Steps have to be simple and reusable.
-
-A simple step can check itself with only one assertion.
-A reusable step doesn't depend on its context.
+* A reusable step doesn't depend on its context.
