@@ -94,7 +94,7 @@ browser.get('google.com');
 
 #### getCurrentUrl()
 
-Returning the browser current url, useful to compare with another url.
+Returns the browser current url, useful to compare with another url.
 
 ```Typescript
 return expect(browser.getCurrentUrl()).is.eventually.equal('google.com');
@@ -102,7 +102,7 @@ return expect(browser.getCurrentUrl()).is.eventually.equal('google.com');
 
 #### getTitle()
 
-Returning the current page's browser title.
+Returns the current page's browser title.
 
 ```Typescript
 return expect(browser.getTitle()).is.eventually.equal('Google');
