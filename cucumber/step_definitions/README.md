@@ -4,7 +4,7 @@
 
 The steps files are feature files implementation. They are written by the QA.
 
-This README is written to learn to the QA how to write a step files with our best practices.
+This README describes how to write a steps file with our best practices.
 
 ## Steps files
 
@@ -36,7 +36,7 @@ Given('I am on Tour of Heroes', function() {
 
 ## Import/Require
 
-An import or a require signals to the compiler that the file needs some more things to works. To write a steps file at least these four things are needed :
+An import or a require signals to the compiler that the file needs some more things to works. To write a steps file at least these two things are needed :
 
 * The pages used in the steps file
 
@@ -129,45 +129,47 @@ googlePage.getSearchInput().sendKeys('How to write a steps file');
 ### Expect chai things :
 
 * expect()
-  * This build a promise. This is your first comparison element.
+  * This is the main element to the [BDD style assertion from chai](http://www.chaijs.com/api/bdd/). It use a chainable language to construct assertions.
 
 ```Typescript
 return expect(
-    dashboardPage.getSearchHeroResult().isDisplayed()
-)
+    dashboardPage.getSearchHeroResult().isDisplayed()).chainableLanguage
 ```
 
 * is
   * This is a linker. It is not mandatory. The code is prettier with it than without it.
 * eventually
-  * This is mandatory. It transform a promise into a promise result.
+  * This is mandatory. It transform a promise into a promise result. [Read more about Chai as promised and Eventually](https://www.npmjs.com/package/chai-as-promised)
 * not
-  * This is an inverser. For example, not.equal() tests the unequality instead of equality.
+  * Negates all assertions that follow in the chain.
 
 ```Typescript
 return expect(browser.getCurrentUrl()).is.eventually.not.equal(dashboardPage.getUrl());
 ```
 
 * equal(parameter)
-  * It tests the equality between the expect() promise result and the equal() parameter.
+  * Asserts that the target is strictly (===) equal to the given val.
 
 ```Typescript
 return expect(browser.getCurrentUrl()).is.eventually.equal(dashboardPage.getUrl());
 ```
 
 * include()
-  * It tests the inclusion between the expect() promise result and the include() parameter.
+  * It tests the inclusion. [Read more about it to learn about the different types.](http://www.chaijs.com/api/bdd/#method_include)
 
 ```Typescript
 return expect(browser.getCurrentUrl()).is.eventually.include(initialPage.getUrl());
 ```
 
 * true
-  * It tests if the expect() promise result is true.
+  * Asserts that the target is strictly (===) equal to true.
 
 ```Typescript
 return expect(initialPage.getRootElement().isDisplayed()).is.eventually.true;
 ```
+
+* Multiple promise assertions
+  * To perform assertions on multiple promises, use Promise.all to combine multiple Chai as Promised assertions. [Read more about it.](https://github.com/domenic/chai-as-promised#multiple-promise-assertions)
 
 ### Templates
 

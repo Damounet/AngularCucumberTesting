@@ -2,9 +2,19 @@
 
 # How to write Feature files
 
-This README is for all the team members, product owner, QA and developpers.
+This README is for the product owner.
 
 It describes how to write a good feature file with our own best practices.
+
+## Feature files
+
+A feature file contains a feature and somes scenarios to test this feature.
+
+A feature file is name 'featureName.feature'. Its place is in /cucumber/features.
+
+A feature file can be use as a test booklet.
+
+Steps files are written with Gherkin.
 
 ## Gherkin
 
