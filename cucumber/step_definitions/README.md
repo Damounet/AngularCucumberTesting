@@ -36,7 +36,7 @@ Given('I am on Tour of Heroes', function() {
 
 ## Import/Require
 
-An import or a require signals to the compiler that the file needs some more things to works. To write a steps file at least these two things are needed :
+An import or a require signals to the compiler that the file needs some more things to work. To write a steps file at least these two things are needed :
 
 * The pages used in the steps file
 
@@ -129,7 +129,7 @@ googlePage.getSearchInput().sendKeys('How to write a steps file');
 ### Expect chai things :
 
 * expect()
-  * This is the main element to the [BDD style assertion from chai](http://www.chaijs.com/api/bdd/). It use a chainable language to construct assertions.
+  * This is the main element to the [BDD style assertion from chai](http://www.chaijs.com/api/bdd/). It uses a chainable language to construct assertions.
 
 ```Typescript
 return expect(
@@ -137,7 +137,7 @@ return expect(
 ```
 
 * is
-  * This is a linker. It is not mandatory. The code is prettier with it than without it.
+  * This is a linker. It is not mandatory. The code is prettier with it.
 * eventually
   * This is mandatory. It transform a promise into a promise result. [Read more about Chai as promised and Eventually](https://www.npmjs.com/package/chai-as-promised)
 * not
