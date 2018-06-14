@@ -1,72 +1,68 @@
-[How to write features files](./cucumber/features) | [How to write steps files](./cucumber/step_definitions) | [How to write pages files](./cucumber/pages)
+# Angular functionnal testing with CucumberJS <img src="https://avatars0.githubusercontent.com/u/320565?s=200&v=4" height="40"/>
 
-# Write functionnal testing with Cucumber
+This project aims to give an implementation of Cucumber tests in an Angular application and propose a solution to let everyone be involved in your project testing.
+
+This project is a fork of the Angular [Tour of Heroes tutorial](https://angular.io/tutorial) application, which already have functional tests. Tests have been duplicated and re-implemented in the Cucumber way.
+
 
 ## Objectives
 
-* Involve the product owner
-* Allow everyone to understand the tests scenarios
-* Use the scenarios as a spec
+* Involve the Product Owner (PO) / the business in the writing of the test documentation and having specifications while working in Agile method.
+* Compartmentalize the implementation of the tests so that:
+  - The PO / business analysts are in charge of writing the scenarios (that can be used as acceptance criteria in a User Story). [How to write features files](./cucumber/features)
+  - The Quality Assurance (QA) is in charge of implementing each step of the scenarios given by the PO. [How to write steps files](./cucumber/step_definitions)
+  - The development team creates helpers called *pages* that will help the QA writing their tests. [How to write pages files](./cucumber/pages)
 
-## Roles
-
-* The Product Owner(PO) has to write the scenarios.
-* The QA has to code the steps.
-* The Developpers have to create the pages to give a toolbox to the QA.
 
 # Dependencies
 
-[Cucumber JS](https://github.com/cucumber/cucumber-js)
-[Protractor Cucumber Framework](https://github.com/protractor-cucumber-framework/protractor-cucumber-framework)
+
+[Protractor Cucumber Framework](https://github.com/protractor-cucumber-framework/protractor-cucumber-framework) to launch the test suite.
+
+[Cucumber JS](https://github.com/cucumber/cucumber-js) is the javascript implementation of Cucumber.
+
+[Chai](http://www.chaijs.com/) brings better assertion in our tests.
 
 # Installation
 
 Install all the dependencies using :
 
-> `yarn install`
+```bash
+yarn install
+```
 
 In order to run the protractors tests you need to get the selenium drivers with :
 
-> `yarn webdriver-manager update`
+```bash
+yarn webdriver-manager update
+```
 
 # Running the tests
 
 First you need to run the Tour of Heroes application :
 
-> `yarn run start` (which simply does a `ng serve`)
-
-## Running tour of heroes functionnal tests:
-
-> `protractor protractor-toh.conf.js`
-
-## Running tour of heroes cucumber functionnal tests:
-
-> `protractor protractor-cucumber.conf.js` to run all tests with all features files
-> `protractor protractor-cucumber.conf.js --specs cucumber/features/heroes.feature` to run test on a specific feature file
-
-## Running your tests with cucumber tags:
-
-To use tags you need to uncomment the tags properties in the `protractor-cucumber.conf.js` and add your own tags
-Then you can launch your test with either the first or the second way
-
-## Running your test with parallel execution
-
-You need to uncomment these lines :
-
-```
-/* ,
-shardTestFiles: true,
-maxInstances: 3 */
+```bash
+yarn run start
 ```
 
-in the `protractor-cucumber.conf.js` file
-You can modify the maxInstances number if you need more of them.
-WARNING : The html report won't be relevant after a parallel execution test
+To run tour of heroes functional tests:
+
+```bash
+protractor protractor-toh.conf.js
+```
+
+To run tour of heroes cucumber functional tests:
+
+```bash
+protractor protractor-cucumber.conf.js
+```
+
+For more information about running cucumber tests : https://github.com/cucumber/cucumber-js/blob/master/docs/cli.md
 
 ## Generating the html report
 
-First, you need to run the tour of heroes cucumber functionnal tests with
+After running the cucumber tests :
 
-> `protractor protractor-cucumber.conf.js`
-> Then you need to run
-> `node index.js`
+```bash
+node index.js
+```

@@ -2,45 +2,21 @@
 
 # How to write Feature files
 
-Cucumber library is our way to test our application. Cucumber is very powerful and allows to split the work on the functionnal tests into three core business.
 
-The feature files are in the PO Scope, this document has been created to allow a PO to write a good feature file with our own best practices.
+Feature files are the functional description of the tests. They contain scenarios to test each feature. All the application's feature files can be use as the application's test documentation.
 
-<!-- In this document, a product owner can learn how to write a good feature file with our own best practices.
+They contain a single Feature definition for the system under test and are an executable test script.
 
-The purpose is about writting all the functionnal tests and the tests booklet at the same time.
-
-To write good feature files means to write all functionnal tests and tests booklets.
-
-This document concerns the product owner.
-
-It describes how to write a good feature file with our own best practices. -->
-
-## Feature files
-
-Feature files are the feature functionnal description. They contain scenarios to test the concerns feature. All the application's feature files can be use as the application's test booklet.
-
-To create a feature file, the PO has to place it in /cucumber/features and name it 'featureName.feature'.
+Feature file's place is in /cucumber/features or any subfolder. All feature files have the .feature` file extension.
 
 They are written in Gherkin.
 
-<!-- A feature file contains a feature and somes scenarios to test a feature.
-
-A feature file is name 'featureName.feature'. Its place is in /cucumber/features.
-
-Feature files can be use as a test booklet.
-
-Feature files are written in Gherkin. -->
-
 ## Gherkin
 
-This language is used to write functionnal testing.
+Gherkin is the language that Cucumber uses to define test cases. It is designed to be non-technical and human readable, and collectively describes use cases relating to a software system. The purpose behind Gherkin's syntax is to promote Behavior Driven Development practices across an entire development team, including business analysts and managers. It seeks to enforce firm, unambiguous requirements starting in the initial phases of requirements definition by business management and in other stages of the development lifecycle. (from [Wikipedia](https://en.wikipedia.org/wiki/Cucumber_(software)#Gherkin_language))
 
-Gherkin lets you express the behavior of your app using natural language that can be understood by business experts and non-technical QA staff.
 
-Gherkin works with keywords. These keywords start each the Gherkin's phrases.
-
-[Gherkin reference](https://docs.cucumber.io/gherkin/reference/)
+Gherkin works with keywords. These keywords start each Gherkin phrases. [Gherkin reference](https://docs.cucumber.io/gherkin/reference/)
 
 ### Example
 
@@ -52,31 +28,28 @@ Gherkin works with keywords. These keywords start each the Gherkin's phrases.
 	Scenario : I select a cappuccino on the coffee machine and I get it
 	    Given I am in my office
 	    And I can see that the coffee machine is fully functional
-	    When I press the ‘cappuccino’ button
-	    And I put ‘0.50’€ in the machine
-	    Then I can see that the ‘cappuccino’ is prepared
+	    When I press the 'cappuccino’ button
+	    And I put '0.50’€ in the machine
+	    Then I can see that the 'cappuccino’ is prepared
 	    And I can drink my 'cappuccino'
 
 	Scenario : I select a latte on the coffee machine and I get it
 	    Given I am in my office
 	    And I can see that the coffee machine is fully functional
-	    When I press the ‘latte’ button
-	    And I put ‘0.40’€ in the machine
-	    Then I can see that the ‘latte’ is prepared
+	    When I press the 'latte’ button
+	    And I put '0.40’€ in the machine
+	    Then I can see that the 'latte’ is prepared
 	    And I can drink my 'latte'
 ```
 
 ## Feature
 
-This is the Feature functionnal description.
-It describes the feature environment as well.
+A feature is a Use Case that describes a specific function of the software being tested. There are three parts to a Feature.
 
-Each feature file start with the feature functionnal description.
+  - The Feature: keyword
+  - The Feature name (on the same line as the keyword)
+  - An optional description on the following lines
 
-Be as precise as possible.
-One file for one feature.
-
-Feature contains one or more scenarios.
 
 ```Gherkin
     Feature : Get a coffee
@@ -84,37 +57,39 @@ Feature contains one or more scenarios.
         I want a coffee
 ```
 
+A feature file contains one or more scenarios.
+If there is more than one scenario in it, they are sequentially executed.
+
 ## Scenario
 
-This is the Scenario functionnal description.
+This is the Scenario functional description.
 
-If there is more than one scenario in the file, they are sequentially executed.
-
-Each scenario contains some steps. A scenario with its steps can be use as an acceptance criteria for a scrum/kanban project. [Read more about acceptance criteria.](https://rubygarage.org/blog/clear-acceptance-criteria-and-why-its-important)
+Each scenario contains  a collection of steps. A scenario with its steps can be used as an acceptance criteria for a user story. [Read more about acceptance criteria.](https://rubygarage.org/blog/clear-acceptance-criteria-and-why-its-important)
 
 ```Gherkin
     Scenario : I select a cappuccino on the coffee machine and I get it
 ```
 
+
 ## Steps
 
-A Step is a Gherkin's phrase which starts with the keywords Given, When or Then.
+A Step is a Gherkin phrase which starts with either:
 
-* The keyword **Given** describes a scenario context.
-* The keyword **When** describes an user action.
-* The keyword **Then** checks a result from an user action.
-* The keyword **And** reproduces the previous keyword. It allows to add more details to a context (Given), to add another user action (When) or to add another check (Then).
+* **Given** describes a scenario context and the initial state of the application.
+* **When** describes a user action.
+* **Then** checks a result from a user action.
+* **And** reproduces the previous keyword. It allows to add more details to a context (Given), to add another user action (When) or to add another check (Then).
 
-A step has to be reusable.
+A step needs to be reusable.
 
 ### Example
 
 ```Gherkin
     Given I am in my office
     And I can see that the coffee machine is fully functional
-    When I press the ‘cappuccino’ button
-    And I put ‘0.50’€ in the machine
-    Then I can see that the ‘cappuccino’ is prepared
+    When I press the 'cappuccino’ button
+    And I put '0.50’€ in the machine
+    Then I can see that the 'cappuccino’ is prepared
     And I can drink my 'cappuccino'
 ```
 
@@ -123,43 +98,19 @@ In this example, cappuccino and 0.50 are surrounded with simple quotes. These si
 ```Gherkin
     Given I am in my office
     And I can see that the coffee machine is fully functional
-    When I press the ‘latte’ button
-    And I put ‘0.40’€ in the machine
-    Then I can see that the ‘latte’ is prepared
+    When I press the 'latte' button
+    And I put '0.40'€ in the machine
+    Then I can see that the 'latte' is prepared
     And I can drink my 'latte'
 ```
 
-This other scenario don't need any change in the code to work because the only changes are about changes variables values.
+This other scenario does not need any more work beneath because only variables values changed. A product owner can creates its own scenario if all the action he want to do exists.
 
 ## Background / Scenario outline / Examples
 
-Given the beneath example :
+We can enhance the last 2 examples and use the **Background** keyword to shorten them.
 
-```Gherkin
-    Feature : Get a coffee
-	As a user
-	I want a coffee
-
-	Scenario : I select a cappuccino on the coffee machine and I get it
-	    Given I am in my office
-	    And I can see that the coffee machine is fully functional
-	    When I press the ‘cappuccino’ button
-	    And I put ‘0.50’€ in the machine
-	    Then I can see that the ‘cappuccino’ is prepared
-	    And I can drink my 'cappuccino'
-
-	Scenario : I select a latte on the coffee machine and I get it
-	    Given I am in my office
-	    And I can see that the coffee machine is fully functional
-	    When I press the ‘latte’ button
-	    And I put ‘0.40’€ in the machine
-	    Then I can see that the ‘latte’ is prepared
-	    And I can drink my 'latte'
-```
-
-This example has some problem, first the context is the same for a cappuccino or a latte. When it happens, the **Background** keyword usage is the best thing to do.
-
-The **Background** keyword describes the context of all the scenarios in a feature file.
+The **Background** keyword describes the context of all the scenarios of the feature file.
 The background is unique and it runs automatically before each scenario.
 
 Let's see how it improves our feature readability :
@@ -174,23 +125,21 @@ Let's see how it improves our feature readability :
         And I can see that the coffee machine is fully functional
 
 	Scenario : I select a cappuccino on the coffee machine and I get it
-	    When I press the ‘cappuccino’ button
-	    And I put ‘0.50’€ in the machine
-	    Then I can see that the ‘cappuccino’ is prepared
+	    When I press the 'cappuccino’ button
+	    And I put '0.50’€ in the machine
+	    Then I can see that the 'cappuccino’ is prepared
 	    And I can drink my 'cappuccino'
 
 	Scenario : I select a latte on the coffee machine and I get it
-	    When I press the ‘latte’ button
-	    And I put ‘0.40’€ in the machine
-	    Then I can see that the ‘latte’ is prepared
+	    When I press the 'latte’ button
+	    And I put '0.40’€ in the machine
+	    Then I can see that the 'latte’ is prepared
 	    And I can drink my 'latte'
 ```
 
-There is still a huge problem. The only things that change between these two scenarios are the variables values. The **Scenario Outline** is the solution here.
+**Scenario Outline** is another tool used for templating scenarios. A Scenario Outline is run once for each row in the **Examples** section beneath it.
 
-The **Scenario Outline** steps provide a template which is never directly run. A Scenario Outline is run once for each row in the **Examples** section beneath it (not counting the first row).
-
-The way this works is via placeholders. Placeholders must be contained within < > in the Scenario Outline's steps. These placeholders act as variables.
+Set placeholders, surrounded with **< >**, in your steps to take place of the existing variables.
 
 Data are surrounded with simple quotes because of Typescript usage, they are mandatory.
 
