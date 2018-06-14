@@ -58,7 +58,6 @@ protractor protractor-cucumber.conf.js
 ```
 
 For more information about running cucumber tests : https://github.com/cucumber/cucumber-js/blob/master/docs/cli.md
-
 ## Generating the html report
 
 After running the cucumber tests :
@@ -66,3 +65,16 @@ After running the cucumber tests :
 ```bash
 node index.js
 ```
+
+## Extract of all the known steps 
+
+Run :
+
+```bash
+./cucumber/extract_sentences.sh
+```
+
+It outputs :
+  - a csv file listing all the known steps and how many times each is used.
+  - a markdown file listing all the known steps sorted out by keyword.
+  
