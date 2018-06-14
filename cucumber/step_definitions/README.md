@@ -38,13 +38,13 @@ Given('I am on Tour of Heroes', function() {
 
 An import or a require signals to the compiler that the file needs some more things to work. To write a steps file at least these two things are needed :
 
-* The pages used in the steps file
+- The pages used in the steps file
 
 ```Typescript
 import { InitialPage } from '../pages/initialPage.po';
 ```
 
-* Some libraries
+- Some libraries
 
 Just copy/paste these import/require above all of your step files, modify and add the pages imports.
 
@@ -128,48 +128,48 @@ googlePage.getSearchInput().sendKeys('How to write a steps file');
 
 ### Expect chai things :
 
-* expect()
-  * This is the main element to the [BDD style assertion from chai](http://www.chaijs.com/api/bdd/). It uses a chainable language to construct assertions.
+- expect()
+  - This is the main element to the [BDD style assertion from chai](http://www.chaijs.com/api/bdd/). It uses a chainable language to construct assertions.
 
 ```Typescript
 return expect(
     dashboardPage.getSearchHeroResult().isDisplayed()).chainableLanguage
 ```
 
-* is
-  * This is a linker. It is not mandatory. The code is prettier with it.
-* eventually
-  * This is mandatory. It transform a promise into a promise result. [Read more about Chai as promised and Eventually](https://www.npmjs.com/package/chai-as-promised)
-* not
-  * Negates all assertions that follow in the chain.
+- is
+  - This is a linker. It is not mandatory. The code is prettier with it.
+- eventually
+  - This is mandatory. It transform a promise into a promise result. [Read more about Chai as promised and Eventually](https://www.npmjs.com/package/chai-as-promised)
+- not
+  - Negates all assertions that follow in the chain.
 
 ```Typescript
 return expect(browser.getCurrentUrl()).is.eventually.not.equal(dashboardPage.getUrl());
 ```
 
-* equal(parameter)
-  * Asserts that the target is strictly (===) equal to the given val.
+- equal(parameter)
+  - Asserts that the target is strictly (===) equal to the given val.
 
 ```Typescript
 return expect(browser.getCurrentUrl()).is.eventually.equal(dashboardPage.getUrl());
 ```
 
-* include()
-  * It tests the inclusion. [Read more about it to learn about the different types.](http://www.chaijs.com/api/bdd/#method_include)
+- include()
+  - It tests the inclusion. [Read more about it to learn about the different types.](http://www.chaijs.com/api/bdd/#method_include)
 
 ```Typescript
 return expect(browser.getCurrentUrl()).is.eventually.include(initialPage.getUrl());
 ```
 
-* true
-  * Asserts that the target is strictly (===) equal to true.
+- true
+  - Asserts that the target is strictly (===) equal to true.
 
 ```Typescript
 return expect(initialPage.getRootElement().isDisplayed()).is.eventually.true;
 ```
 
-* Multiple promise assertions
-  * To perform assertions on multiple promises, use Promise.all to combine multiple Chai as Promised assertions. [Read more about it.](https://github.com/domenic/chai-as-promised#multiple-promise-assertions)
+- Multiple promise assertions
+  - To perform assertions on multiple promises, use Promise.all to combine multiple Chai as Promised assertions. [Read more about it.](https://github.com/domenic/chai-as-promised#multiple-promise-assertions)
 
 ### Templates
 
