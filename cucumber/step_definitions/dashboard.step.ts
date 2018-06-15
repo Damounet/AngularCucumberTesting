@@ -11,14 +11,14 @@ const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 const expect = chai.expect;
 
-When('the user clicks on {string} button from top heroes grid', function(
+/* When('the user clicks on {string} button from top heroes grid', function(
   heroName
 ) {
   dashboardPage.getHeroButtonByName(heroName).click();
   return expect(browser.getCurrentUrl()).is.eventually.not.equal(
     dashboardPage.getUrl()
   );
-});
+}); */
 
 Then('the user is on the {string} hero details page', function(heroName) {
   return expect(

@@ -69,7 +69,11 @@ When the feature file is ready try to launch the functionnal test with :
 
 > `protractor protractor-cucumber.conf.js`
 
-The console gives all the steps template because the steps aren't implemented yet.
+Here is the result :
+
+<img src="../../res/consoleScreen.png">
+
+It gives all the steps template, in yellow on the image above, because the steps aren't implemented yet.
 
 ```Typescript
 Then('I am on the {string} hero details page', function (string) {
@@ -82,11 +86,15 @@ The template returns the keyword `pending` which stops the scenario execution bu
 
 ## Templates
 
-### Browser things :
+### Browser main methods
+
+#### Browser definition
+
+browser is the protractor webdriver implementation : [Protractor browser documentation](https://www.protractortest.org/#/api?view=ProtractorBrowser)
 
 #### get()
 
-Used to redirect the browser on another webpage.
+Navigate to the given destination and loads mock modules before Angular.
 
 ```Typescript
 browser.get('google.com');
@@ -94,7 +102,7 @@ browser.get('google.com');
 
 #### getCurrentUrl()
 
-Returns the browser current url, useful to compare with another url.
+Schedules a command to retrieve the URL of the current page.
 
 ```Typescript
 return expect(browser.getCurrentUrl()).is.eventually.equal('google.com');
@@ -102,13 +110,17 @@ return expect(browser.getCurrentUrl()).is.eventually.equal('google.com');
 
 #### getTitle()
 
-Returns the current page's browser title.
+Schedules a command to retrieve the current page's title.
 
 ```Typescript
 return expect(browser.getTitle()).is.eventually.equal('Google');
 ```
 
-### User action things :
+### User action methods
+
+#### Definition
+
+Methods to simulate user action during the tests.
 
 #### click()
 
@@ -126,22 +138,27 @@ Used to write something in an input.
 googlePage.getSearchInput().sendKeys('How to write a steps file');
 ```
 
-### Expect chai things :
+### Chai as promised main methods
 
-- expect()
-  - This is the main element to the [BDD style assertion from chai](http://www.chaijs.com/api/bdd/). It uses a chainable language to construct assertions.
+- Assertion
+
+  - In computer software testing, a test assertion is an expression which encapsulates some testable logic specified about a target under test.
+
+  - expect()
+    - This is the main element to the [BDD style assertion from chai](http://www.chaijs.com/api/bdd/). It uses a chainable language to construct assertions.
 
 ```Typescript
 return expect(
     dashboardPage.getSearchHeroResult().isDisplayed()).chainableLanguage
 ```
 
-- is
-  - This is a linker. It is not mandatory. The code is prettier with it.
-- eventually
-  - This is mandatory. It transform a promise into a promise result. [Read more about Chai as promised and Eventually](https://www.npmjs.com/package/chai-as-promised)
-- not
-  - Negates all assertions that follow in the chain.
+- Chainable language
+  - is
+    - This is a linker. It is not mandatory. The code is prettier with it.
+  - eventually
+    - This is mandatory. It transform a promise into a promise result. [Read more about Chai as promised and Eventually](https://www.npmjs.com/package/chai-as-promised)
+  - not
+    - Negates all assertions that follow in the chain.
 
 ```Typescript
 return expect(browser.getCurrentUrl()).is.eventually.not.equal(dashboardPage.getUrl());
@@ -173,9 +190,13 @@ return expect(initialPage.getRootElement().isDisplayed()).is.eventually.true;
 
 ### Templates
 
+In the feature file :
+
 ```Gherkin
 Given I am on a specific website
 ```
+
+In the steps file :
 
 ```Typescript
 Given('I am on a specific website',function(){
@@ -184,9 +205,13 @@ Given('I am on a specific website',function(){
 });
 ```
 
+In the feature file :
+
 ```Gherkin
 When I want to click on this button
 ```
+
+In the steps file :
 
 ```Typescript
 When('I want to click on this button',function(){
@@ -195,9 +220,13 @@ When('I want to click on this button',function(){
 })
 ```
 
+In the feature file :
+
 ```Gherkin
 Then I am on another page
 ```
+
+In the steps file :
 
 ```Typescript
 Then('I am on another page',function(){
