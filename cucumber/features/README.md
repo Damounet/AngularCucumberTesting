@@ -28,17 +28,17 @@ Gherkin works with keywords. These keywords start each Gherkin phrases. [Gherkin
 	Scenario : I select a cappuccino on the coffee machine and I get it
 	    Given I am in my office
 	    And I can see that the coffee machine is fully functional
-	    When I press the 'cappuccino’ button
-	    And I put '0.50’€ in the machine
-	    Then I can see that the 'cappuccino’ is prepared
+	    When I press the 'cappuccino' button
+	    And I put '0.50'€ in the machine
+	    Then I can see that the 'cappuccino' is prepared
 	    And I can drink my 'cappuccino'
 
 	Scenario : I select a latte on the coffee machine and I get it
 	    Given I am in my office
 	    And I can see that the coffee machine is fully functional
-	    When I press the 'latte’ button
-	    And I put '0.40’€ in the machine
-	    Then I can see that the 'latte’ is prepared
+	    When I press the 'latte' button
+	    And I put '0.40'€ in the machine
+	    Then I can see that the 'latte' is prepared
 	    And I can drink my 'latte'
 ```
 
@@ -87,9 +87,9 @@ A step needs to be reusable.
 ```Gherkin
     Given I am in my office
     And I can see that the coffee machine is fully functional
-    When I press the 'cappuccino’ button
-    And I put '0.50’€ in the machine
-    Then I can see that the 'cappuccino’ is prepared
+    When I press the 'cappuccino' button
+    And I put '0.50'€ in the machine
+    Then I can see that the 'cappuccino' is prepared
     And I can drink my 'cappuccino'
 ```
 
@@ -125,15 +125,15 @@ Let's see how it improves our feature readability :
         And I can see that the coffee machine is fully functional
 
 	Scenario : I select a cappuccino on the coffee machine and I get it
-	    When I press the 'cappuccino’ button
-	    And I put '0.50’€ in the machine
-	    Then I can see that the 'cappuccino’ is prepared
+	    When I press the 'cappuccino' button
+	    And I put '0.50'€ in the machine
+	    Then I can see that the 'cappuccino' is prepared
 	    And I can drink my 'cappuccino'
 
 	Scenario : I select a latte on the coffee machine and I get it
-	    When I press the 'latte’ button
-	    And I put '0.40’€ in the machine
-	    Then I can see that the 'latte’ is prepared
+	    When I press the 'latte' button
+	    And I put '0.40'€ in the machine
+	    Then I can see that the 'latte' is prepared
 	    And I can drink my 'latte'
 ```
 
