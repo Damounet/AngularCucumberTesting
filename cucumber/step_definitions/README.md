@@ -1,6 +1,6 @@
 [How to write features files](../features) | [How to write pages files](../pages)
 
-# How to write a steps file
+# How to write a step file
 
 <!-- TODO -->
 
@@ -8,29 +8,29 @@ The steps files are feature files implementation. They are written by the QA.
 
 This README describes how to write a steps file with our best practices.
 
-## Steps files
+## Step files
 
 <!-- TODO -->
 
-A Steps file contains the implementation of the steps.
+A Step file contains the implementation of the steps.
 
-A Steps file is name 'featureFileName.step.ts'. Its place is in /cucumber/step_definitions.
+A Step file is name 'featureFileName.step.ts'. Its place is in /cucumber/step_definitions.
 
-Steps files are written with Typescript.
+Step files are written with Typescript.
 
 [To learn about Typescript.](https://www.typescriptlang.org/)
 
 ## Steps
 
-A Step in a steps file is an implementation of the same step in the feature file.
+A Step in a step file is an implementation of the same step in the feature file.
 
-In the feature file :
+Feature file Step :
 
 ```Gherkin
 Given I am on Tour of Heroes
 ```
 
-In the steps file :
+Step implementation :
 
 ```Typescript
 Given('I am on Tour of Heroes', function() {
@@ -76,13 +76,22 @@ Here is the result :
 
 <img src="../../res/consoleScreen.png" height="400">
 
-It gives all the steps template, in yellow on the image above, because the steps aren't implemented yet.
+<!-- En jaune sur l'image au dessus, Cucumber signal que certaines step ne sont pas encore implémentées et donne un template de base pour ces steps. -->
+
+Cucumber signals with the yellow color, some unimplemented steps. It gives a basic templates for these steps.
+
+<!-- It gives all the steps template, in yellow on the image above, because the steps aren't implemented yet.
+ -->
 
 The template returns the keyword `pending` which stops the scenario execution but it doesn't send an error.
 
 ## Testing tools
 
-In the following parts, pages will be used. They are a sum of helpers to get some element from a specific page. [For more informations about pages.](../pages/README.md)
+<!-- Comme dit plus haut, cette documentation a été écrite pour la QA qui ne sont pas des développeurs de formation. Pour les aider dans l'implementation des tests fonctionnels, des fichiers appellés les "pages" sont créés par les développeurs. Ces fichiers contiennent des helpers pour pouvoir obtenir les éléments de la page en question. [Plus d'informations sur les fichiers pages.](../pages/README.md) -->
+
+To help the QA with the functional test implementation, the developpers have to create some "**pages**" files. These files contain some helpers to get some page elements like a button or an url. [For more informations about pages.](../pages/README.md)
+
+<!-- In the following parts, pages will be used. They are a sum of helpers to get some element from a specific page. [For more informations about pages.](../pages/README.md) -->
 
 ### Browser main methods
 
@@ -90,9 +99,9 @@ In the following parts, pages will be used. They are a sum of helpers to get som
 
 browser is the protractor webdriver implementation : [Protractor browser documentation](https://www.protractortest.org/#/api?view=ProtractorBrowser)
 
-#### get()
+#### get(url)
 
-Navigate to the given destination and loads mock modules before Angular.
+Navigate to the given destination.
 
 ```Typescript
 browser.get('google.com');
@@ -113,6 +122,8 @@ Schedules a command to retrieve the current page's title.
 ```Typescript
 return expect(browser.getTitle()).is.eventually.equal('Google');
 ```
+
+---
 
 ### User action methods
 
@@ -136,63 +147,100 @@ Used to write something in an input.
 googlePage.getSearchInput().sendKeys('How to write a steps file');
 ```
 
+#### Scroll methods
+
+##### scroll(x,y)
+
+Scrolls the window to a particular place in the document.
+
+```Typescript
+browser.executeScript('window.scroll(x,y)');
+```
+
+##### scrollBy(x,y)
+
+Scrolls the document in the window by the given amount.
+
+```Typescript
+browser.executeScript('window.scroll(x,y)');
+```
+
+##### scrollIntoView()
+
+The Element.scrollIntoView() method scrolls the element on which it's called into the visible area of the browser window.
+
+```Typescript
+browser.executeScript('page.getElement().scrollIntoView()');
+```
+
+---
+
 ### Assertion
 
-- In computer software testing, a test assertion is an expression which encapsulates some testable logic specified about a target under test.
+In computer software testing, a test assertion is an expression which encapsulates some testable logic specified about a target under test.
 
-- expect()
-  - This is the main element to the [BDD style assertion from chai](http://www.chaijs.com/api/bdd/). It uses a chainable language to construct assertions.
+#### expect()
+
+This is the main element to the [BDD style assertion from chai](http://www.chaijs.com/api/bdd/). It uses a chainable language to construct assertions.
 
 ```Typescript
 return expect(
     dashboardPage.getSearchHeroResult().isDisplayed()).chainableLanguage
 ```
 
-- Chainable language
-  - is
-    - This is a linker. It is not mandatory. The code is prettier with it.
-  - eventually
-    - This is mandatory. It transform a promise into a promise result. [Read more about Chai as promised and Eventually](https://www.npmjs.com/package/chai-as-promised)
-  - not
-    - Negates all assertions that follow in the chain.
+#### Chainable language
+
+##### is
+
+This is a linker. It is not mandatory. The code is prettier with it.
+
+##### eventually
+
+This is mandatory. It transform a promise into a promise result. [Read more about Chai as promised and Eventually](https://www.npmjs.com/package/chai-as-promised)
+
+##### not
+
+Negates all assertions that follow in the chain.
 
 ```Typescript
 return expect(browser.getCurrentUrl()).is.eventually.not.equal(dashboardPage.getUrl());
 ```
 
-- equal(parameter)
-  - Asserts that the target is strictly (===) equal to the given val.
+##### equal(parameter)
+
+Asserts that the target is strictly (===) equal to the given val.
 
 ```Typescript
 return expect(browser.getCurrentUrl()).is.eventually.equal(dashboardPage.getUrl());
 ```
 
-- include()
-  - When the target is a string, include() asserts that the given string val is a substring of the target. [Read more about it to learn about the different types.](http://www.chaijs.com/api/bdd/#method_include)
+##### include()
+
+When the target is a string, include() asserts that the given string val is a substring of the target. [Read more about it to learn about the different types.](http://www.chaijs.com/api/bdd/#method_include)
 
 ```Typescript
 return expect(browser.getCurrentUrl()).is.eventually.include(initialPage.getUrl());
 ```
 
-- true
-  - Asserts that the target is strictly (===) equal to true.
+##### true
+
+Asserts that the target is strictly (===) equal to true.
 
 ```Typescript
 return expect(initialPage.getRootElement().isDisplayed()).is.eventually.true;
 ```
 
-- Multiple promise assertions
-  - To perform assertions on multiple promises, use Promise.all to combine multiple Chai as Promised assertions. [Read more about it.](https://github.com/domenic/chai-as-promised#multiple-promise-assertions)
+---
 
 ### Examples
 
-In the feature file :
+Feature file Step :
 
 ```Gherkin
 Given I am on a specific website
 ```
 
-In the steps file :
+Step implementation :
 
 ```Typescript
 Given('I am on a specific website',function(){
@@ -201,13 +249,13 @@ Given('I am on a specific website',function(){
 });
 ```
 
-In the feature file :
+Feature file Step :
 
 ```Gherkin
 When I want to click on this button
 ```
 
-In the steps file :
+Step implementation :
 
 ```Typescript
 When('I want to click on this button',function(){
@@ -216,13 +264,13 @@ When('I want to click on this button',function(){
 })
 ```
 
-In the feature file :
+Feature file Step :
 
 ```Gherkin
 Then I am on another page
 ```
 
-In the steps file :
+Step implementation :
 
 ```Typescript
 Then('I am on another page',function(){
@@ -232,32 +280,21 @@ Then('I am on another page',function(){
 
 ## Our best practices
 
-A Given and a When step have to check their own behavior.
+- A Given and a When step have to check their own behavior.
 
-A Then step has to check the functionnal result from the previous step.
+> ```Typescript
+> When('I want to click on this button',function(){
+> page.getThisButton.click();
+> return expect(browser.getCurrentUrl()).is.eventually.equal(expectedPage.getUrl());
+> })
+> ```
+>
+> This When implementation clicks on the button and check if the current url is the same as the url of the expected page.
 
-### Example
+- A feature file's step always find its implementation if it exists, but to add readability a step has to be in the a specific step file which is a specific feature file's implementation.
 
-#### Given
+<!-- - A Then step has to check the functionnal result from the previous step.
 
-In the feature file :
-
-```Gherkin
-Given I am on a specific website
-```
-
-In the steps file :
-
-```Typescript
-Given('I am on a specific website',function(){
-    browser.get(websiteUrl);
-    return expect(browser.getCurrentUrl()).is.eventually.equal(websiteUrl);
-});
-```
-
-This Given implementation goes on the specific website and it check if it is on this specific website.
-
-#### When
 
 In the feature file :
 
@@ -267,14 +304,14 @@ When I want to click on this button
 
 In the steps file :
 
-```Typescript
-When('I want to click on this button',function(){
-    page.getThisButton.click();
-    return expect(browser.getCurrentUrl()).is.eventually.equal(expectedPage.getUrl());
-})
-```
-
-This When implementation clicks on the button and check if the current url is the same as the url of the expected page.
+> ```Typescript
+> When('I want to click on this button',function(){
+> page.getThisButton.click();
+> return expect(browser.getCurrentUrl()).is.eventually.equal(expectedPage.getUrl());
+> })
+> ```
+>
+> This When implementation clicks on the button and check if the current url is the same as the url of the expected page.
 
 #### Then
 
@@ -292,4 +329,4 @@ Then('I am on another page',function(){
 })
 ```
 
-This Then implementation checks if the title of the expectedPage is the expected title.
+This Then implementation checks if the title of the expectedPage is the expected title. -->

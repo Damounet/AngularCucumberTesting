@@ -15,6 +15,7 @@ When('the user clicks on {string} button from top heroes grid', function(
   heroName
 ) {
   dashboardPage.getHeroButtonByName(heroName).click();
+
   return expect(browser.getCurrentUrl()).is.eventually.not.equal(
     dashboardPage.getUrl()
   );
