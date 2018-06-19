@@ -2,23 +2,15 @@
 
 # How to write a step file
 
-<!-- TODO -->
+These files contain the feature phrases implementation. There is one step file for one feature file.
 
-The steps files are feature files implementation. They are written by the QA.
+This documentation has been written to allow the Quality Assurance (QA) to write the steps files and to give our best practices identified during our Proof Of Concept (POC).
 
-This README describes how to write a steps file with our best practices.
+In our own environment, the files are written with Typescript because our functionnal tests have been set up for an Angular application. [Learn more about Typescript.](https://www.typescriptlang.org/)
 
-## Step files
+They are named as :
 
-<!-- TODO -->
-
-A Step file contains the implementation of the steps.
-
-A Step file is name 'featureFileName.step.ts'. Its place is in /cucumber/step_definitions.
-
-Step files are written with Typescript.
-
-[To learn about Typescript.](https://www.typescriptlang.org/)
+> featureFileName.step.ts
 
 ## Steps
 
@@ -286,6 +278,6 @@ Then('I am on another page',function(){
 > })
 > ```
 >
-> When the user clicks on the button and check if the current url is the same as the url of the expected page.
+> During the above step the user clicks on the button and the steps checks if the current url is the same as the url of the expected page.
 
 - A step file has to be created for each feature.

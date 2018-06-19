@@ -4,7 +4,7 @@
 
 # Pages files
 
-Page files contain helpers to the QA to write their steps files.
+In order to help the Quality Assurance (QA) to write the steps, we use helpers called pages files which allow technical abstraction.
 
 They are located in /cucumber/pages folder. Their name is "pageNamePage.po.ts". They are a sum of getter to allow the QA to access the pages' elements.
 
@@ -12,7 +12,7 @@ This documentation has to help developpers to write the pages files.
 
 ## Base page
 
-The base page is an interface. It is mandatory to implement it.
+The base page is an interface. Each new page has to implement it.
 
 It contains getters and attributes used in all pages.
 
@@ -35,18 +35,20 @@ getElementById(elementId:string){
 }
 
 getElementByClass(){
-    return element(by.className(.class));
+    return element(by.className(".class"));
 }
 
 getElementByCssSelector(){
-    return element(by.css(img(src="srcValue")))
+    return element(by.css(img[src="srcValue"]))
 }
 ```
+
+[Locators documentation.](https://github.com/angular/protractor/blob/master/docs/locators.md)
 
 ## Some guidelines
 
 Create a page's exportable constant instance to allow a simple access to the pages methods.
 
 ```Typescript
-export const aPagePage = new APagePage();
+export const genericPage = new GenericPage();
 ```
