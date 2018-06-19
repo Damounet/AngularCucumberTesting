@@ -24,7 +24,7 @@ Step files are written with Typescript.
 
 A Step in a step file is an implementation of the same step in the feature file.
 
-Feature file Step :
+Feature file :
 
 ```Gherkin
 Given I am on Tour of Heroes
@@ -76,22 +76,13 @@ Here is the result :
 
 <img src="../../res/consoleScreen.png" height="400">
 
-<!-- En jaune sur l'image au dessus, Cucumber signal que certaines step ne sont pas encore implémentées et donne un template de base pour ces steps. -->
-
 Cucumber signals with the yellow color, some unimplemented steps. It gives a basic templates for these steps.
-
-<!-- It gives all the steps template, in yellow on the image above, because the steps aren't implemented yet.
- -->
 
 The template returns the keyword `pending` which stops the scenario execution but it doesn't send an error.
 
 ## Testing tools
 
-<!-- Comme dit plus haut, cette documentation a été écrite pour la QA qui ne sont pas des développeurs de formation. Pour les aider dans l'implementation des tests fonctionnels, des fichiers appellés les "pages" sont créés par les développeurs. Ces fichiers contiennent des helpers pour pouvoir obtenir les éléments de la page en question. [Plus d'informations sur les fichiers pages.](../pages/README.md) -->
-
-To help the QA with the functional test implementation, the developpers have to create some "**pages**" files. These files contain some helpers to get some page elements like a button or an url. [For more informations about pages.](../pages/README.md)
-
-<!-- In the following parts, pages will be used. They are a sum of helpers to get some element from a specific page. [For more informations about pages.](../pages/README.md) -->
+To help the QA with the functional test implementation, the developers have to create some "**pages**" files. These files contain some helpers to get some page elements like a button or an url. [For more informations about pages.](../pages/README.md)
 
 ### Browser main methods
 
@@ -149,6 +140,8 @@ googlePage.getSearchInput().sendKeys('How to write a steps file');
 
 #### Scroll methods
 
+The measure unit is the pixel.
+
 ##### scroll(x,y)
 
 Scrolls the window to a particular place in the document.
@@ -162,7 +155,7 @@ browser.executeScript('window.scroll(x,y)');
 Scrolls the document in the window by the given amount.
 
 ```Typescript
-browser.executeScript('window.scroll(x,y)');
+browser.executeScript('window.scrollBy(x,y)');
 ```
 
 ##### scrollIntoView()
@@ -172,6 +165,10 @@ The Element.scrollIntoView() method scrolls the element on which it's called int
 ```Typescript
 browser.executeScript('page.getElement().scrollIntoView()');
 ```
+
+##### Usage
+
+scroll(x,y) is a way to scroll but it's not the way since our applications are X-Platform. The screen resolution won't be the same between a smartphone or a pc. Scroll(x,y) won't give the same result on these two devices. Its recommend to user scrollIntoView() in most cases and the two others functions for specific cases.
 
 ---
 
@@ -234,7 +231,7 @@ return expect(initialPage.getRootElement().isDisplayed()).is.eventually.true;
 
 ### Examples
 
-Feature file Step :
+Feature file :
 
 ```Gherkin
 Given I am on a specific website
@@ -249,7 +246,7 @@ Given('I am on a specific website',function(){
 });
 ```
 
-Feature file Step :
+Feature file :
 
 ```Gherkin
 When I want to click on this button
@@ -264,7 +261,7 @@ When('I want to click on this button',function(){
 })
 ```
 
-Feature file Step :
+Feature file :
 
 ```Gherkin
 Then I am on another page
@@ -289,44 +286,6 @@ Then('I am on another page',function(){
 > })
 > ```
 >
-> This When implementation clicks on the button and check if the current url is the same as the url of the expected page.
+> When the user clicks on the button and check if the current url is the same as the url of the expected page.
 
-- A feature file's step always find its implementation if it exists, but to add readability a step has to be in the a specific step file which is a specific feature file's implementation.
-
-<!-- - A Then step has to check the functionnal result from the previous step.
-
-
-In the feature file :
-
-```Gherkin
-When I want to click on this button
-```
-
-In the steps file :
-
-> ```Typescript
-> When('I want to click on this button',function(){
-> page.getThisButton.click();
-> return expect(browser.getCurrentUrl()).is.eventually.equal(expectedPage.getUrl());
-> })
-> ```
->
-> This When implementation clicks on the button and check if the current url is the same as the url of the expected page.
-
-#### Then
-
-In the feature file :
-
-```Gherkin
-Then I am on another page
-```
-
-In the steps file :
-
-```Typescript
-Then('I am on another page',function(){
-    return expect(expectedPage.getTitle()).is.eventually.equal('Cucumber is awesome');
-})
-```
-
-This Then implementation checks if the title of the expectedPage is the expected title. -->
+- A step file has to be created for each feature.

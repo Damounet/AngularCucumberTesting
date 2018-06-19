@@ -41,3 +41,6 @@ Thumbs.db
 
 # package
 /package-lock.json
+
+# cucumber
+/cucumber/reports/*
