@@ -74,7 +74,7 @@ The template returns the keyword `pending` which stops the scenario execution bu
 
 ## Testing tools
 
-To help the QA with the functional test implementation, the developers have to create some "**pages**" files. These files contain some helpers to get some page elements like a button or an url. [For more informations about pages.](../pages/README.md)
+To help the QA with the functional test implementation, the developers have to create some "**pages**" files. These files contain some [helpers](https://en.wikipedia.org/wiki/Helper_class) to get some page elements like a button or an url. [For more informations about pages.](../pages/README.md)
 
 ### Browser main methods
 
@@ -166,7 +166,7 @@ scroll(x,y) is a way to scroll but it's not the way since our applications are X
 
 ### Assertion
 
-In computer software testing, a test assertion is an expression which encapsulates some testable logic specified about a target under test.
+In computer software testing, a test assertion is a statement that asserts that a given premise is true, if it's not then the program would throw an error.
 
 #### expect()
 
