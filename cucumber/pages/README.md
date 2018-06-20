@@ -1,5 +1,3 @@
-# angularFunctionnalTesting
-
 [How to write features files](../features) | [How to write steps files](../step_definitions)
 
 # Pages files
