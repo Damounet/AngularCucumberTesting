@@ -9,7 +9,13 @@
     "start": "ng serve",
     "test": "ng test",
     "lint": "tslint ./src/**/*.ts -t verbose",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "cucumber": "protractor protractor-cucumber.conf.js",
+    "dashboard": "protractor protractor-cucumber.conf.js --specs cucumber/features/dashboard.feature",
+    "heroDetails": "protractor protractor-cucumber.conf.js --specs cucumber/features/heroDetails.feature",
+    "heroes": "protractor protractor-cucumber.conf.js --specs cucumber/features/heroes.feature",
+    "initialState": "protractor protractor-cucumber.conf.js --specs cucumber/features/initialState.feature",
+    "messages": "protractor protractor-cucumber.conf.js --specs cucumber/features/messages.feature"
   },
   "keywords": [],
   "author": "",

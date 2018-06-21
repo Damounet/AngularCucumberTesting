@@ -1,17 +1,20 @@
-Feature: Heroes
+Feature: Heroes page
+  As a user
+  I want to see all the heroes already present on Tour of Heroes
+  So I can add another and read about a lot of them and learn more about them
 
-  Background: The user is on the heroes page
-    Given the user is on the toh heroes page
+  Background: I am on the heroes page
+    Given I am on the toh heroes page
 
-  Scenario: The user add Varian Wrynn as a hero
-    When the user writes 'Varian Wrynn' in the add bar
-    And the user click on the add button
-    Then 'Varian Wrynn' is displayed in the heroes list
+  Scenario: I add Varian Wrynn as a hero
+    When I write 'Varian Wrynn' in the add bar
+    And I click on the add button
+    Then I can see 'Varian Wrynn' in the heroes list
 
-  Scenario: The user delete Narco from the hero list
-    When the user click on the 'Narco' delete button
-    Then 'Narco' is not present anymore in the heroes list
+  Scenario: I delete Narco from the hero list
+    When I click on the 'Narco' delete button
+    Then I can't see 'Narco' in the heroes list anymore
 
-  Scenario: The user goes on Narco details page from heroes page
-    When the user click on the 'Narco' button
-    Then the user is on the 'Narco' hero details page
+  Scenario: I go on Narco details page from heroes page
+    When I click on the 'Narco' button
+    Then I am on the 'Narco' hero details page

@@ -1,26 +1,26 @@
-import { browser, Button, element, by } from 'protractor';
-import { protractor } from 'protractor/built/ptor';
-import { messagesPage } from '../pages/messagesPage.po';
+import { browser, Button, element, by } from "protractor";
+import { protractor } from "protractor/built/ptor";
+import { messagesPage } from "../pages/messagesPage.po";
 
-var { Given, When, Then, After } = require('cucumber');
-const path = require('path');
-const chai = require('chai');
-const chaiAsPromised = require('chai-as-promised');
+var { Given, When, Then, After } = require("cucumber");
+const path = require("path");
+const chai = require("chai");
+const chaiAsPromised = require("chai-as-promised");
 chai.use(chaiAsPromised);
 const expect = chai.expect;
 
-Given('the message page is visible', function() {
+Given("I see the message page", function() {
   return expect(messagesPage.getRootElement().isDisplayed()).is.eventually.true;
 });
 
-When('the user click on the clear button', function() {
+When("I click on the clear button", function() {
   messagesPage.getClearButton().click();
   return expect(
     messagesPage.getRootElement().isPresent()
   ).is.eventually.not.true;
 });
 
-Then('the messages page is not visible anymore', function() {
+Then("I can't see the messages page anymore", function() {
   return expect(
     messagesPage.getRootElement().isPresent()
   ).is.eventually.not.true;

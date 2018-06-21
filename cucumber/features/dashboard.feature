@@ -1,32 +1,35 @@
-Feature: Dashboard
+Feature: Dashboard page
+  As a user
+  I want to access to dashboard, see the top heroes and look for one specific hero
+  So I can see my favorite heroes
 
-  Background: The user is on Tour of Heroes and the page is displaying the dashboard
-    Given the user is on Tour of Heroes
-    And the page displays the dashboard
+  Background: I am on Tour of Heroes and I see the dashboard
+    Given I am on Tour of Heroes
+    And I see the dashboard
 
-  Scenario Outline: The user click on Narco in the top heroes grid
-    When the user clicks on <heroName> button from top heroes grid
-    Then the user is on the <heroName> hero details page
+  Scenario Outline: I click on Narco in the top heroes grid
+    When I click on <heroName> button from top heroes grid
+    Then I am on the <heroName> hero details page
 
     Examples: Hero name
       | heroName  |
       | 'Narco'   |
       | 'Magneta' |
 
-  Scenario Outline: The user look for Narco with the search
-    Given the search bar is visible
-    When the user writes <searchChars> in the search bar
-    Then <heroName> button is visible in the search result
+  Scenario Outline: I look for Narco with the search
+    Given I see the search bar
+    When I write <searchChars> in the search bar
+    Then I can see <heroName> button in the search result
 
     Examples: Search examples
       | heroName  | searchChars |
       | 'Narco'   | 'Na'        |
       | 'Magneta' | 'Gne'       |
 
-  Scenario Outline: The user goes to the Narco details page from search results
-    Given <heroName> button is displayed in the search result
-    When the user click on the <heroName> button from the search result
-    Then the user is on the <heroName> hero details page
+  Scenario Outline: I go to the Narco details page from search results
+    Given I see <heroName> button in the search result
+    When I click on the <heroName> button from the search result
+    Then I am on the <heroName> hero details page
 
     Examples: Hero name
       | heroName  |
