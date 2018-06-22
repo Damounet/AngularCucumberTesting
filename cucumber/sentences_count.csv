@@ -1,0 +1,34 @@
+Sentence;Count
+Given I am on Tour of Heroes;       4
+Given I am on the <placeholder> details page;       2
+Given I am on the toh heroes page;       3
+Given I see <placeholder> button in the search result;       1
+Given I see that the browser page title is <placeholder>;       1
+Given I see that the page has the title <placeholder>;       1
+Given I see the Dashboard button;       1
+Given I see the Heroes button;       1
+Given I see the dashboard;       2
+Given I see the message page;       3
+Given I see the search bar;       1
+When I click on <placeholder> button from top heroes grid;       1
+When I click on dashboard button;       1
+When I click on heroes button;       1
+When I click on the <placeholder> button;       1
+When I click on the <placeholder> button from the search result;       1
+When I click on the <placeholder> delete button;       1
+When I click on the add button;       1
+When I click on the back button;       1
+When I click on the clear button;       3
+When I click on the save button;       1
+When I type <placeholder> in the name bar;       1
+When I write <placeholder> in the add bar;       1
+When I write <placeholder> in the search bar;       1
+Then I am on the <placeholder> hero details page;       3
+Then I am on the dashboard page;       1
+Then I am on the heroes page;       1
+Then I can see <placeholder> button in the search result;       1
+Then I can see <placeholder> in the heroes list;       1
+Then I can see <placeholder> in the top heroes grid;       1
+Then I can't see the messages page anymore;       3
+Then I can<placeholder>Narco' in the heroes list anymore;       1
+Then I come back to the dashboard page;       2

@@ -15,7 +15,9 @@
     "heroDetails": "protractor protractor-cucumber.conf.js --specs cucumber/features/heroDetails.feature",
     "heroes": "protractor protractor-cucumber.conf.js --specs cucumber/features/heroes.feature",
     "initialState": "protractor protractor-cucumber.conf.js --specs cucumber/features/initialState.feature",
-    "messages": "protractor protractor-cucumber.conf.js --specs cucumber/features/messages.feature"
+    "messages": "protractor protractor-cucumber.conf.js --specs cucumber/features/messages.feature",
+    "report": "node index.js",
+    "sentences": "./cucumber/extract_sentences.sh"
   },
   "keywords": [],
   "author": "",

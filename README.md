@@ -4,18 +4,15 @@ This project aims to give an implementation of Cucumber tests in an Angular appl
 
 This project is a fork of the Angular [Tour of Heroes tutorial](https://angular.io/tutorial) application, which already have functional tests. Tests have been duplicated and re-implemented in the Cucumber way.
 
-
 ## Objectives
 
-* Involve the Product Owner (PO) / the business in the writing of the test documentation and having specifications while working in Agile method.
-* Compartmentalize the implementation of the tests so that:
+- Involve the Product Owner (PO) / the business in the writing of the test documentation and having specifications while working in Agile method.
+- Compartmentalize the implementation of the tests so that:
   - The PO / business analysts are in charge of writing the scenarios (that can be used as acceptance criteria in a User Story). [How to write features files](./cucumber/features)
   - The Quality Assurance (QA) is in charge of implementing each step of the scenarios given by the PO. [How to write steps files](./cucumber/step_definitions)
-  - The development team creates helpers called *pages* that will help the QA writing their tests. [How to write pages files](./cucumber/pages)
-
+  - The development team creates helpers called _pages_ that will help the QA writing their tests. [How to write pages files](./cucumber/pages)
 
 # Dependencies
-
 
 [Protractor Cucumber Framework](https://github.com/protractor-cucumber-framework/protractor-cucumber-framework) to launch the test suite.
 
@@ -53,28 +50,61 @@ protractor protractor-toh.conf.js
 
 To run tour of heroes cucumber functional tests:
 
+All cucumber tests :
+
 ```bash
-protractor protractor-cucumber.conf.js
+yarn cucumber
+```
+
+InitialState tests :
+
+```bash
+yarn initialTest
+```
+
+Dashboard tests :
+
+```bash
+yarn dashboard
+```
+
+Heroes tests :
+
+```bash
+yarn heroes
+```
+
+HeroDetails tests :
+
+```bash
+yarn heroDetails
+```
+
+Messages tests :
+
+```bash
+yarn messages
 ```
 
 For more information about running cucumber tests : https://github.com/cucumber/cucumber-js/blob/master/docs/cli.md
+
 ## Generating the html report
 
 After running the cucumber tests :
 
 ```bash
-node index.js
+yarn report
 ```
 
-## Extract of all the known steps 
+## Extract of all the known steps
 
 Run :
 
 ```bash
-./cucumber/extract_sentences.sh
+yarn sentences
 ```
 
 It outputs :
-  - a csv file listing all the known steps and how many times each is used.
-  - a markdown file listing all the known steps sorted out by keyword.
-  
+
+- a csv file listing all the known steps and how many times each is used.
+- a markdown file listing all the known steps sorted out by keyword.
