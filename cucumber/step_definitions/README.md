@@ -2,9 +2,9 @@
 
 # How to write a step file
 
-These files contain the feature phrases implementation. There is one step file for one feature file.
+These files contain the feature steps implementation. There is one step file for one feature file.
 
-This documentation has been written to allow the Quality Assurance (QA) to write the steps files and to give our best practices identified during our Proof Of Concept (POC).
+This documentation has been written to allow the Quality Assurance (QA) to write the steps files and to give our best practices identified during our Proof Of Concept ([POC](https://en.wikipedia.org/wiki/Proof_of_concept)).
 
 In our own environment, the files are written with Typescript because our functionnal tests have been set up for an Angular application. [Learn more about Typescript.](https://www.typescriptlang.org/)
 
@@ -14,7 +14,7 @@ They are named as :
 
 ## Steps
 
-A Step in a step file is an implementation of the same step in the feature file.
+A step file contains the feature step implementation.
 
 Feature file :
 
@@ -73,6 +73,8 @@ Cucumber signals with the yellow color, some unimplemented steps. It gives a bas
 The template returns the keyword `pending` which stops the scenario execution but it doesn't send an error.
 
 ## Testing tools
+
+### Pages files
 
 To help the QA with the functional test implementation, the developers have to create some "**pages**" files. These files contain some [helpers](https://en.wikipedia.org/wiki/Helper_class) to get some page elements like a button or an url. [For more informations about pages.](../pages/README.md)
 
